@@ -46,6 +46,7 @@ let isShopOpen = true;
 
 console.log(isShopOpen);
 
+// 01/04/2025
 // How to declare variable
 
 // let --- temporary variable or subject value change  , const , var ,
@@ -69,7 +70,7 @@ var heightOfMangoTree = 12;
 heightOfMangoTree = 14;
 console.log(heightOfMangoTree);
 
-// console.log(window);
+console.log(window);
 
 weight = 140; // if we do not declare variable with let, const , var then it is by default var
 
@@ -82,6 +83,8 @@ const cityName = "Gwalior";
 var countryName;
 
 console.log(typeof streetName);
+
+//Data Type
 
 // cityName = "gwalior";
 
@@ -138,3 +141,67 @@ and this is not a joke  */
 console.log(typeof 23);
 console.log("hello");
 console.log("hello");
+
+// 02/04/2025
+// operators in js
+
+//  = //assignment operator   -- ham value de rahe hai
+
+// ==  // loose equality  only value check
+//  === // strict equality  value check , data type check
+
+console.log(centuriesOfVirat === numberOfCenturyOfSachin);
+
+console.log(20 === "20");
+console.log(20 == "21");
+
+// difference check
+console.log(20 != "20"); // loose difference - only value check
+console.log(20 !== "200"); // strong difference - value and data type check
+
+console.log(undefined == null);
+console.log(undefined === null);
+
+console.log(4 > 5); // false
+console.log(4 < 5); // true
+console.log(5 <= 5); // true
+
+console.log(centuriesOfVirat, numberOfCenturyOfSachin);
+
+if (centuriesOfVirat < numberOfCenturyOfSachin) {
+  console.log("virat is great");
+} else {
+  console.log("sachin is great");
+}
+
+// logical operator
+console.log(true && true);
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+console.log(!false);
+console.log(!true);
+
+// Addition operator
+
+let x = 10;
+x += 4; // x = x + 5;
+console.log(x);
+
+x -= 2; // x = x - 2;
+console.log(x);
+
+x *= 5; // x = x * 5;
+console.log(x);
+
+x /= 2; // x = x / 2;
+console.log(x);
+
+x %= 4; // x = x % 3;
+console.log(x);
