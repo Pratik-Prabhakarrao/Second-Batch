@@ -279,7 +279,73 @@ console.log(wizard);
 
 //multiline string
 
-const str = `hello how \
+("My name is harry Potter \n\
+  I studty in Hogwarts School of Witchcraft and Wizardry \n\
+   and my address is house \n\
+at 4 Privet Drive, Little Whinging, Surrey ");
+
+const str = `hello how 
 are you
 Khana kha ke jaba ha`;
 console.log(str);
+
+// 04/04/2025
+//Type conversion and type coercion
+// type conversion -- is done by developer
+
+let n = "35";
+console.log(typeof n);
+let stringN = Number(n); // this does not mutate or change the original value
+console.log(stringN, typeof stringN);
+console.log(typeof n);
+
+let no = 200;
+console.log(typeof no);
+let stringN0 = String(n); // this does not mutate or change the original value
+console.log(stringN0, typeof stringN0);
+console.log(typeof no);
+
+let villageName = "Bhind";
+
+let villageNameNumber = Number(villageName);
+
+console.log(villageNameNumber);
+
+console.log(typeof NaN); // type - -NUMBER EVEN THOUGH IT SAY NOT A NUMBER THAT MEANS IT IS AN INVALID NUMBER
+
+// number to boolean
+console.log(Boolean(1)); // true
+console.log(Boolean(0)); // false
+console.log(Boolean(5)); // false
+console.log(Boolean(-5)); // false
+
+// Truthy and falsy value
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean(" ")); //   false
+console.log(Boolean(undefined)); //   false
+console.log(Boolean(null)); //   false
+console.log(Boolean(NaN)); //   false
+console.log(Boolean(false)); //   false
+
+// Truthy value
+console.log(Boolean("a")); //   true
+console.log(Boolean(-2)); //   true
+console.log(Boolean(9)); //   true
+console.log(Boolean("#")); //   true
+
+// type coercion
+
+let adderess = "Adarsh colony , Gole ka mandir" + 474005; // this is same as "Adarsh colony , Gole ka mandir" + "474005"
+console.log(adderess);
+
+console.log("100" + "5");
+console.log("100" - "5"); // type coercion from string to number
+console.log("100" / "5");
+console.log("100" * "5");
+
+if (undefined) {
+  console.log("give me parle G");
+} else {
+  console.log("it's ok I am going to other shop");
+}
