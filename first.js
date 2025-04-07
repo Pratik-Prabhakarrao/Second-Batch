@@ -210,142 +210,210 @@ and this is not a joke  */
 
 // string operator  +  concatination
 
-const presidentFirstName = "Donald";
+// const presidentFirstName = "Donald";
 
-const presidentLastName = "Trump";
+// const presidentLastName = "Trump";
 
-console.log(presidentFirstName + "        " + presidentLastName);
+// console.log(presidentFirstName + "        " + presidentLastName);
 
-// unary operator
-console.log(+"10"); // convert string into number
-console.log(typeof +"10"); // convert string into number
+// // unary operator
+// console.log(+"10"); // convert string into number
+// console.log(typeof +"10"); // convert string into number
 
-console.log(+true); // 1
-console.log(+false); // 0
-console.log(typeof +true); //1  convert boolean into number 1
+// console.log(+true); // 1
+// console.log(+false); // 0
+// console.log(typeof +true); //1  convert boolean into number 1
 
-console.log(typeof -false); //0  convert boolean into number 0
-console.log(typeof -null); // number convert null into number 0
-console.log();
+// console.log(typeof -false); //0  convert boolean into number 0
+// console.log(typeof -null); // number convert null into number 0
+// console.log();
 
-let y = 100;
-console.log(y++); // post increament //print karega 100 lekin value 101 -> post
-console.log(++y); // pre increament  // value = 102
+// let y = 100;
+// console.log(y++); // post increament //print karega 100 lekin value 101 -> post
+// console.log(++y); // pre increament  // value = 102
 
-console.log(y--); // post decreament // print = 102  // value =101
-console.log(y--); // post decreament // print = 101 // value 100
+// console.log(y--); // post decreament // print = 102  // value =101
+// console.log(y--); // post decreament // print = 101 // value 100
 
-console.log(--y); // pre decreament // 99
-console.log(--y); // pre decreament // 98
+// console.log(--y); // pre decreament // 99
+// console.log(--y); // pre decreament // 98
 
-console.log(!0); //
+// console.log(!0); //
 
-console.log(!1); //
+// console.log(!1); //
 
-// operator precedence table
+// // operator precedence table
 
-let speed = 120;
-let distance = 500;
+// let speed = 120;
+// let distance = 500;
 
-let time = distance / speed;
-console.log(time);
+// let time = distance / speed;
+// console.log(time);
 
-let viratAge = 36;
-let sachinAge = 51;
+// let viratAge = 36;
+// let sachinAge = 51;
 
-let average = (viratAge + sachinAge) / 2;
-console.log(average);
+// let average = (viratAge + sachinAge) / 2;
+// console.log(average);
 
-console.log(3 * 4 + 2);
+// console.log(3 * 4 + 2);
 
-// template literals
-console.log(
-  `we have sachin tendulkar whos age is ${sachinAge} we have virat and his age is ${viratAge}`
-);
-console.log(
-  "we have sachin tendulkar whos age is ${sachinAge} we have virat and his age is viratAge"
-); // THIS DOES NOT WORK
+// // template literals
+// console.log(
+//   `we have sachin tendulkar whos age is ${sachinAge} we have virat and his age is ${viratAge}`
+// );
+// console.log(
+//   "we have sachin tendulkar whos age is ${sachinAge} we have virat and his age is viratAge"
+// ); // THIS DOES NOT WORK
 
-const GringottsWizardingBankCredit = 50000;
-const shoppingExpence = 2300;
-const firstName = "Harry";
-const schoolName = " Hogwarts School of Witchcraft and Wizardry";
+// const GringottsWizardingBankCredit = 50000;
+// const shoppingExpence = 2300;
+// const firstName = "Harry";
+// const schoolName = " Hogwarts School of Witchcraft and Wizardry";
 
-const wizard = ` My name is  ${firstName}   I study in ${schoolName}  I went for shopping flying broom it coted me  ${shoppingExpence} Now I have  ${
-  GringottsWizardingBankCredit - shoppingExpence
-} left in my Bank accounts`;
+// const wizard = ` My name is  ${firstName}   I study in ${schoolName}  I went for shopping flying broom it coted me  ${shoppingExpence} Now I have  ${
+//   GringottsWizardingBankCredit - shoppingExpence
+// } left in my Bank accounts`;
 
-console.log(wizard);
+// console.log(wizard);
 
-//multiline string
+// //multiline string
 
-("My name is harry Potter \n\
-  I studty in Hogwarts School of Witchcraft and Wizardry \n\
-   and my address is house \n\
-at 4 Privet Drive, Little Whinging, Surrey ");
+// ("My name is harry Potter \n\
+//   I studty in Hogwarts School of Witchcraft and Wizardry \n\
+//    and my address is house \n\
+// at 4 Privet Drive, Little Whinging, Surrey ");
 
-const str = `hello how 
-are you
-Khana kha ke jaba ha`;
-console.log(str);
+// const str = `hello how
+// are you
+// Khana kha ke jaba ha`;
+// console.log(str);
 
 // 04/04/2025
 //Type conversion and type coercion
 // type conversion -- is done by developer
 
-let n = "35";
-console.log(typeof n);
-let stringN = Number(n); // this does not mutate or change the original value
-console.log(stringN, typeof stringN);
-console.log(typeof n);
+// let n = "35";
+// console.log(typeof n);
+// let stringN = Number(n); // this does not mutate or change the original value
+// console.log(stringN, typeof stringN);
+// console.log(typeof n);
 
-let no = 200;
-console.log(typeof no);
-let stringN0 = String(n); // this does not mutate or change the original value
-console.log(stringN0, typeof stringN0);
-console.log(typeof no);
+// let no = 200;
+// console.log(typeof no);
+// let stringN0 = String(n); // this does not mutate or change the original value
+// console.log(stringN0, typeof stringN0);
+// console.log(typeof no);
 
-let villageName = "Bhind";
+// let villageName = "Bhind";
 
-let villageNameNumber = Number(villageName);
+// let villageNameNumber = Number(villageName);
 
-console.log(villageNameNumber);
+// console.log(villageNameNumber);
 
-console.log(typeof NaN); // type - -NUMBER EVEN THOUGH IT SAY NOT A NUMBER THAT MEANS IT IS AN INVALID NUMBER
+// console.log(typeof NaN); // type - -NUMBER EVEN THOUGH IT SAY NOT A NUMBER THAT MEANS IT IS AN INVALID NUMBER
 
-// number to boolean
-console.log(Boolean(1)); // true
-console.log(Boolean(0)); // false
-console.log(Boolean(5)); // false
-console.log(Boolean(-5)); // false
+// // number to boolean
+// console.log(Boolean(1)); // true
+// console.log(Boolean(0)); // false
+// console.log(Boolean(5)); // false
+// console.log(Boolean(-5)); // false
 
-// Truthy and falsy value
-console.log(Boolean(0)); // false
-console.log(Boolean("")); // false
-console.log(Boolean(" ")); //   false
-console.log(Boolean(undefined)); //   false
-console.log(Boolean(null)); //   false
-console.log(Boolean(NaN)); //   false
-console.log(Boolean(false)); //   false
+// // Truthy and falsy value
+// console.log(Boolean(0)); // false
+// console.log(Boolean("")); // false
+// console.log(Boolean(" ")); //   false
+// console.log(Boolean(undefined)); //   false
+// console.log(Boolean(null)); //   false
+// console.log(Boolean(NaN)); //   false
+// console.log(Boolean(false)); //   false
 
-// Truthy value
-console.log(Boolean("a")); //   true
-console.log(Boolean(-2)); //   true
-console.log(Boolean(9)); //   true
-console.log(Boolean("#")); //   true
+// // Truthy value
+// console.log(Boolean("a")); //   true
+// console.log(Boolean(-2)); //   true
+// console.log(Boolean(9)); //   true
+// console.log(Boolean("#")); //   true
 
-// type coercion
+// // type coercion
 
-let adderess = "Adarsh colony , Gole ka mandir" + 474005; // this is same as "Adarsh colony , Gole ka mandir" + "474005"
-console.log(adderess);
+// let adderess = "Adarsh colony , Gole ka mandir" + 474005; // this is same as "Adarsh colony , Gole ka mandir" + "474005"
+// console.log(adderess);
 
-console.log("100" + "5");
-console.log("100" - "5"); // type coercion from string to number
-console.log("100" / "5");
-console.log("100" * "5");
+// console.log("100" + "5");
+// console.log("100" - "5"); // type coercion from string to number
+// console.log("100" / "5");
+// console.log("100" * "5");
+
+// if ("") {
+//   console.log("give me parle G");
+// } else {
+//   console.log("it's ok I am going to other shop");
+// }
+
+// 07/04/2025
+// Conditional control structure /
+
+// simple if
+
+if (" ") {
+  // this will convert to true and will execute the code
+  // blok of code
+  console.log("this is from the block of code");
+}
 
 if (undefined) {
-  console.log("give me parle G");
+  //this will convert to false and will not execute the code
+  // blok of code
+  console.log("this is from the block of code");
+}
+
+if..else
+ synatx
+if (condition) {
+  // if condition is true this block will run
 } else {
-  console.log("it's ok I am going to other shop");
+  // if condition is true this block will run
+}
+
+const kapilDevWickt = 2500;
+const rAshwin = 650;
+
+console.log(kapilDevWickt < rAshwin); // true
+
+if (kapilDevWickt > rAshwin) {
+  console.log("Kapil Dev is a great Bowler");
+} else {
+  console.log("R. Ashwin is a great Bowler");
+}
+
+// if else if else if else
+// <35 - fail  35-65 - C gread 65-75- B Gread >75-- A grade
+
+const marks = Number(prompt("Enter the marks of student to chek gread"));
+console.log(typeof marks);
+
+if (marks < 35) {
+  console.log(`Student is fail becoz ${marks} is below 35`);
+} else if (marks >= 35 && marks <= 65) {
+  console.log(`Student got C Gread ${marks} is between 35 to 65`);
+} else if (marks > 65 && marks <= 75) {
+  console.log(`Student got B Gread ${marks} is between 65 to 75`);
+} else {
+  console.log(`Student got A Gread ${marks} is above 75`);
+}
+
+nested if else
+
+console.log(81 % 2);
+
+let number = Number(prompt("Enter a number to chek if it is odd or even"));
+
+if (number > 0) {
+  if (number % 2 === 0) {
+    console.log(`the ${number} is even`);
+  } else {
+    console.log(`the ${number} is odd`);
+  }
+} else {
+  console.log("the number enterd is less than zero hence cna't be checked ");
 }
