@@ -355,65 +355,186 @@ and this is not a joke  */
 
 // simple if
 
-if (" ") {
-  // this will convert to true and will execute the code
-  // blok of code
-  console.log("this is from the block of code");
-}
+// if (" ") {
+//   // this will convert to true and will execute the code
+//   // blok of code
+//   console.log("this is from the block of code");
+// }
 
-if (undefined) {
-  //this will convert to false and will not execute the code
-  // blok of code
-  console.log("this is from the block of code");
-}
+// if (undefined) {
+//   //this will convert to false and will not execute the code
+//   // blok of code
+//   console.log("this is from the block of code");
+// }
 
-if..else
- synatx
-if (condition) {
-  // if condition is true this block will run
-} else {
-  // if condition is true this block will run
-}
+// if..else
+//  synatx
+// if (condition) {
+//   // if condition is true this block will run
+// } else {
+//   // if condition is true this block will run
+// }
 
-const kapilDevWickt = 2500;
-const rAshwin = 650;
+// const kapilDevWickt = 2500;
+// const rAshwin = 650;
 
-console.log(kapilDevWickt < rAshwin); // true
+// console.log(kapilDevWickt < rAshwin); // true
 
-if (kapilDevWickt > rAshwin) {
-  console.log("Kapil Dev is a great Bowler");
-} else {
-  console.log("R. Ashwin is a great Bowler");
-}
+// if (kapilDevWickt > rAshwin) {
+//   console.log("Kapil Dev is a great Bowler");
+// } else {
+//   console.log("R. Ashwin is a great Bowler");
+// }
 
 // if else if else if else
 // <35 - fail  35-65 - C gread 65-75- B Gread >75-- A grade
 
-const marks = Number(prompt("Enter the marks of student to chek gread"));
-console.log(typeof marks);
+// const marks = Number(prompt("Enter the marks of student to chek gread"));
+// console.log(typeof marks);
 
-if (marks < 35) {
-  console.log(`Student is fail becoz ${marks} is below 35`);
-} else if (marks >= 35 && marks <= 65) {
-  console.log(`Student got C Gread ${marks} is between 35 to 65`);
-} else if (marks > 65 && marks <= 75) {
-  console.log(`Student got B Gread ${marks} is between 65 to 75`);
-} else {
-  console.log(`Student got A Gread ${marks} is above 75`);
+// if (marks < 35) {
+//   console.log(`Student is fail becoz ${marks} is below 35`);
+// } else if (marks >= 35 && marks <= 65) {
+//   console.log(`Student got C Gread ${marks} is between 35 to 65`);
+// } else if (marks > 65 && marks <= 75) {
+//   console.log(`Student got B Gread ${marks} is between 65 to 75`);
+// } else {
+//   console.log(`Student got A Gread ${marks} is above 75`);
+// }
+
+// nested if else
+
+// console.log(81 % 2);
+
+// let number = Number(prompt("Enter a number to chek if it is odd or even"));
+
+// if (number > 0) {
+//   if (number % 2 === 0) {
+//     if (number < 10) {
+//       console.log(`the ${number} is less than 10 and it is even`);
+//     } else {
+//       console.log(`the ${number} is grater than 10 and it is even`);
+//     }
+//   } else {
+//     console.log(`the ${number} is odd`);
+//   }
+// } else {
+//   console.log("the number enterd is less than zero hence cna't be checked ");
+// }
+
+//09/04/2025
+
+// conditional control structure continue
+
+const month = Number(prompt("enter a number of month to chek it's name"));
+
+switch (month) {
+  case 1:
+    console.log("This is January");
+    break;
+  case 1 + 1:
+    console.log("This is february");
+    break;
+  case 3:
+    console.log("This is March");
+    break;
+  case 4:
+    console.log("This is April");
+    break;
+  case 5:
+    console.log("This is May");
+    break;
+  case 6:
+    console.log("This is June");
+    break;
+  case 7:
+    console.log("This is July");
+    break;
+  case 8:
+    console.log("This is August");
+    break;
+  case 9:
+    console.log("This is September");
+    break;
+  case 10:
+    console.log("This is October");
+    break;
+  case 11:
+    console.log("This is November");
+    break;
+  case 12:
+    console.log("This is December");
+    break;
+  default:
+    console.log("This is not any month");
 }
 
-nested if else
-
-console.log(81 % 2);
-
-let number = Number(prompt("Enter a number to chek if it is odd or even"));
-
-if (number > 0) {
-  if (number % 2 === 0) {
-    console.log(`the ${number} is even`);
-  } else {
-    console.log(`the ${number} is odd`);
-  }
+if (month === 1) {
+  console.log("This is January");
+} else if (month === 2) {
+  console.log("This is february");
+} else if (month === 3) {
+  console.log("This is March");
+} else if (month === 4) {
+  console.log("This is April");
+} else if (month === 5) {
+  console.log("This is May");
+} else if (month === 6) {
+  console.log("This is June");
+} else if (month === 7) {
+  console.log("This is july");
 } else {
-  console.log("the number enterd is less than zero hence cna't be checked ");
+  console.log(
+    "the month is grATER THAN 7 and I don't have information about it "
+  );
 }
+
+// Statement vs expression
+console.log(1 + 1); // expression
+
+//Statement
+function add(a, b) {
+  addition = a + b;
+  return addition;
+}
+
+console.log(add(3, 6));
+
+const odiVitatcentury = 51;
+const testVitatcentury = 30;
+const sacinOdiCentury = 49;
+console.log(
+  `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
+    odiVitatcentury + testVitatcentury
+  } `
+);
+
+// following code will not run as it expects expession
+// console.log(
+//   `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
+//     odiVitatcentury + testVitatcentury
+//   }  and schin has ${sacinOdiCentury} ${if(odiVitatcentury>sacinOdiCentury){
+//     console.log("virat is graat");
+
+//   }}
+// );
+
+console.log(
+  `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
+    odiVitatcentury + testVitatcentury
+  }  and schin has ${sacinOdiCentury} ${
+    odiVitatcentury > sacinOdiCentury ? "virat is great" : "sachin is great"
+  }`
+);
+
+// Ternary operator/ statement
+
+// if (odiVitatcentury > sacinOdiCentury) {
+//   console.log("virat is great");
+// } else {
+//   console.log("Sachin is great");
+// }
+
+odiVitatcentury < sacinOdiCentury
+  ? console.log("virat is not great") // this part will print if condition is true
+  : console.log("Sachin is  very very grat"); // this will print if condition is false
