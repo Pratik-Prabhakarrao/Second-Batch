@@ -426,115 +426,222 @@ and this is not a joke  */
 
 // conditional control structure continue
 
-const month = Number(prompt("enter a number of month to chek it's name"));
+// const month = Number(prompt("enter a number of month to chek it's name"));
 
-switch (month) {
-  case 1:
-    console.log("This is January");
-    break;
-  case 1 + 1:
-    console.log("This is february");
-    break;
-  case 3:
-    console.log("This is March");
-    break;
-  case 4:
-    console.log("This is April");
-    break;
-  case 5:
-    console.log("This is May");
-    break;
-  case 6:
-    console.log("This is June");
-    break;
-  case 7:
-    console.log("This is July");
-    break;
-  case 8:
-    console.log("This is August");
-    break;
-  case 9:
-    console.log("This is September");
-    break;
-  case 10:
-    console.log("This is October");
-    break;
-  case 11:
-    console.log("This is November");
-    break;
-  case 12:
-    console.log("This is December");
-    break;
-  default:
-    console.log("This is not any month");
-}
+// switch (month) {
+//   case 1:
+//     console.log("This is January");
+//     break;
+//   case 1 + 1:
+//     console.log("This is february");
+//     break;
+//   case 3:
+//     console.log("This is March");
+//     break;
+//   case 4:
+//     console.log("This is April");
+//     break;
+//   case 5:
+//     console.log("This is May");
+//     break;
+//   case 6:
+//     console.log("This is June");
+//     break;
+//   case 7:
+//     console.log("This is July");
+//     break;
+//   case 8:
+//     console.log("This is August");
+//     break;
+//   case 9:
+//     console.log("This is September");
+//     break;
+//   case 10:
+//     console.log("This is October");
+//     break;
+//   case 11:
+//     console.log("This is November");
+//     break;
+//   case 12:
+//     console.log("This is December");
+//     break;
+//   default:
+//     console.log("This is not any month");
+// }
 
-if (month === 1) {
-  console.log("This is January");
-} else if (month === 2) {
-  console.log("This is february");
-} else if (month === 3) {
-  console.log("This is March");
-} else if (month === 4) {
-  console.log("This is April");
-} else if (month === 5) {
-  console.log("This is May");
-} else if (month === 6) {
-  console.log("This is June");
-} else if (month === 7) {
-  console.log("This is july");
-} else {
-  console.log(
-    "the month is grATER THAN 7 and I don't have information about it "
-  );
-}
+// if (month === 1) {
+//   console.log("This is January");
+// } else if (month === 2) {
+//   console.log("This is february");
+// } else if (month === 3) {
+//   console.log("This is March");
+// } else if (month === 4) {
+//   console.log("This is April");
+// } else if (month === 5) {
+//   console.log("This is May");
+// } else if (month === 6) {
+//   console.log("This is June");
+// } else if (month === 7) {
+//   console.log("This is july");
+// } else {
+//   console.log(
+//     "the month is grATER THAN 7 and I don't have information about it "
+//   );
+// }
 
-// Statement vs expression
-console.log(1 + 1); // expression
+// // Statement vs expression
+// console.log(1 + 1); // expression
 
-//Statement
-function add(a, b) {
-  addition = a + b;
-  return addition;
-}
+// //Statement
+// function add(a, b) {
+//   addition = a + b;
+//   return addition;
+// }
 
-console.log(add(3, 6));
+// console.log(add(3, 6));
 
-const odiVitatcentury = 51;
-const testVitatcentury = 30;
-const sacinOdiCentury = 49;
-console.log(
-  `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
-    odiVitatcentury + testVitatcentury
-  } `
-);
-
-// following code will not run as it expects expession
+// const odiVitatcentury = 51;
+// const testVitatcentury = 30;
+// const sacinOdiCentury = 49;
 // console.log(
 //   `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
 //     odiVitatcentury + testVitatcentury
-//   }  and schin has ${sacinOdiCentury} ${if(odiVitatcentury>sacinOdiCentury){
-//     console.log("virat is graat");
-
-//   }}
+//   } `
 // );
 
-console.log(
-  `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
-    odiVitatcentury + testVitatcentury
-  }  and schin has ${sacinOdiCentury} ${
-    odiVitatcentury > sacinOdiCentury ? "virat is great" : "sachin is great"
-  }`
-);
+// // following code will not run as it expects expession
+// // console.log(
+// //   `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
+// //     odiVitatcentury + testVitatcentury
+// //   }  and schin has ${sacinOdiCentury} ${if(odiVitatcentury>sacinOdiCentury){
+// //     console.log("virat is graat");
 
-// Ternary operator/ statement
+// //   }}
+// // );
 
-// if (odiVitatcentury > sacinOdiCentury) {
-//   console.log("virat is great");
-// } else {
-//   console.log("Sachin is great");
+// console.log(
+//   `virat has ${odiVitatcentury} century in ODI and ${testVitatcentury} century in test and it's total is ${
+//     odiVitatcentury + testVitatcentury
+//   }  and schin has ${sacinOdiCentury} ${
+//     odiVitatcentury > sacinOdiCentury ? "virat is great" : "sachin is great"
+//   }`
+// );
+
+// // Ternary operator/ statement
+
+// // if (odiVitatcentury > sacinOdiCentury) {
+// //   console.log("virat is great");
+// // } else {
+// //   console.log("Sachin is great");
+// // }
+
+// odiVitatcentury < sacinOdiCentury
+//   ? console.log("virat is not great") // this part will print if condition is true
+//   : console.log("Sachin is  very very grat"); // this will print if condition is false
+
+// 10/04/2025
+// STRICT MODDE
+
+// "use strict";
+// height = 23;
+// console.log(height);
+
+// const else = "ABC"
+
+// const private = "Aman";
+// console.log(private);
+
+// const interface = "marut";
+// console.log(interface); //Uncaught SyntaxError: Unexpected strict mode reserved word (at first.js:551:7)
+
+// let isAccountHolder = false;
+// const isMemberOFClub = true;
+// if (isMemberOFClub) isAccountholder = true;
+// if (isAccountHolder) console.log("congrats");
+
+// function checkThis() {
+//   console.log(this);
 // }
 
-odiVitatcentury < sacinOdiCentury
-  ? console.log("virat is not great") // this part will print if condition is true
-  : console.log("Sachin is  very very grat"); // this will print if condition is false
+// console.log(checkThis()); // this is undefined in strict mode
+// console.log(checkThis()); // this points to window object in sloppy mode
+
+// 12/04/2025
+// Function in Js
+
+// const playerName = "Rojer Federer";
+
+// console.log(playerName);
+
+// function decleration
+// this keyword points to undefined in strict mode and points to window object in sloppy mode
+function print() {
+  const print = "Printing T shirt";
+  console.log(print); // this will run
+  return print; // we have to return something from function to get something out of function
+}
+
+const runFunction = print(); // Function calling/ Function invoking/ Function running
+// storing a invoked function in variable is called as value capturing
+
+console.log(runFunction);
+
+////////
+
+// calling function before initilisation
+console.log(washingMachin("SurfExcel", 25, 5));
+
+function washingMachin(washingliquid, water, cloths) {
+  // parameter of function
+  if (washingliquid === "tide") {
+    console.log("Barish me white ho to tide ho");
+  } else if (washingliquid === "nirma") {
+    console.log("Barish me white ho to tide ho");
+  } else if (washingliquid === "fena") {
+    console.log("Fena hi lena ");
+  } else {
+    console.log("Sadharan ditergent Powder");
+  }
+
+  washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
+  return washingProcess;
+}
+
+console.log(washingMachin("fena", 25, 5)); // end user  // we give argument in place of parameter And order of parameter should match with the arguments
+console.log(washingMachin(25, 5, "tide"));
+
+// function expression
+
+// console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
+
+const dhulaiMachin = function (washingliquid, water, cloths) {
+  // parameter of function
+  if (washingliquid === "tide") {
+    console.log("Barish me white ho to tide ho");
+  } else if (washingliquid === "nirma") {
+    console.log("Barish me white ho to tide ho");
+  } else if (washingliquid === "fena") {
+    console.log("Fena hi lena ");
+  } else {
+    console.log("Sadharan ditergent Powder");
+  }
+
+  washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
+  return washingProcess;
+};
+
+console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
+
+// Arrow function ES2015
+
+// const addition = (a, b) => {
+//   return [a + b, a * b]; // if there is multiple things to return then we return all things in array i.e., []
+// };
+
+const addition = (a, b) => a + b;
+const square = (a) => a * a; // if there is single input we can eliminate () and if output is in single line we can eliminate {} and retun
+// arrow function does not have it's own This keyword
+// arrow function is not even hoisted
+console.log(addition(88, 12));
+
+console.log(square(25));
