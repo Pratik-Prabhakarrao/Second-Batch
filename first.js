@@ -589,14 +589,14 @@ console.log(runFunction);
 ////////
 
 // calling function before initilisation
-console.log(washingMachin("SurfExcel", 25, 5));
+console.log(washingMachin("SurfExcel", 25, 5)); //function hoisting
 
 function washingMachin(washingliquid, water, cloths) {
   // parameter of function
   if (washingliquid === "tide") {
     console.log("Barish me white ho to tide ho");
   } else if (washingliquid === "nirma") {
-    console.log("Barish me white ho to tide ho");
+    console.log("Dudh si safedi Nirma se aaye");
   } else if (washingliquid === "fena") {
     console.log("Fena hi lena ");
   } else {
@@ -614,7 +614,7 @@ console.log(washingMachin(25, 5, "tide"));
 
 // console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
 
-const dhulaiMachin = function (washingliquid, water, cloths) {
+let dhulaiMachin = function (washingliquid, water, cloths) {
   // parameter of function
   if (washingliquid === "tide") {
     console.log("Barish me white ho to tide ho");
@@ -645,3 +645,80 @@ const square = (a) => a * a; // if there is single input we can eliminate () and
 console.log(addition(88, 12));
 
 console.log(square(25));
+
+const chekThis = () => {
+  console.log(this); // arrow function does not have this keyword of it's own it always point to it's lexical paernt or grandparent or ultimately to the window object
+};
+
+console.log(chekThis());
+8;
+
+// 14/04/2025
+// variable Hoisting -- Jhanda behaviour
+
+console.log(car1); // var hoist but not value only variable  // undefined
+console.log(car2); // undefined
+
+var car1 = "Kia sonet"; // variable declaration and we are initialising it's value
+var car2; // only declering variable not initialising
+
+// console.log(car3); // let does not Hoist
+// let car3 = "Tata Punch";
+
+// console.log(car4);  // variable with const do not hoist
+// const car4 = "Mercedes GLS";
+
+// programming for calculator
+
+// decleration
+
+function calculator(num1, num2) {
+  let addition = num1 + num2;
+  let subtraction = num1 - num2;
+  let multiplication = num1 * num2;
+  let division = num1 / num2;
+  let squareOfFirstNo = num1 * num1;
+  let squareOfSecondNo = num2 * num2;
+
+  return [
+    addition,
+    subtraction,
+    multiplication,
+    division,
+    squareOfFirstNo,
+    squareOfSecondNo,
+  ];
+}
+
+const num1 = Number(prompt("Enter first number"));
+const num2 = Number(prompt("Enter second number"));
+
+const doCalculation = calculator(num1, num2); // end user  // real argument
+console.log(doCalculation);
+
+// Array
+
+// const cricketTeam = `MSD` ,'virat ,"Rohit Sharma";// we can't store multiple value in single variale
+
+// we need a data structure to store multiple values  -- Array
+
+const cricketTeam = [
+  // array literaal
+  "MSD",
+  "Virat",
+  "Rohit",
+  "KL Rahul",
+  "Hardik Pandya",
+  "Nirmal",
+  "Aman",
+  "Marut",
+];
+
+console.log(cricketTeam);
+console.log(typeof cricketTeam);
+
+// second way to create array
+
+const team = new Array("Yuvraj", "Abhishek"); // Array constructor
+
+console.log(team);
