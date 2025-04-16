@@ -575,126 +575,124 @@ and this is not a joke  */
 
 // function decleration
 // this keyword points to undefined in strict mode and points to window object in sloppy mode
-function print() {
-  const print = "Printing T shirt";
-  console.log(print); // this will run
-  return print; // we have to return something from function to get something out of function
-}
+// function print() {
+//   const print = "Printing T shirt";
+//   console.log(print); // this will run
+//   return print; // we have to return something from function to get something out of function
+// }
 
-const runFunction = print(); // Function calling/ Function invoking/ Function running
-// storing a invoked function in variable is called as value capturing
+// const runFunction = print(); // Function calling/ Function invoking/ Function running
+// // storing a invoked function in variable is called as value capturing
 
-console.log(runFunction);
+// console.log(runFunction);
 
-////////
+// ////////
 
-// calling function before initilisation
-console.log(washingMachin("SurfExcel", 25, 5)); //function hoisting
+// // calling function before initilisation
+// console.log(washingMachin("SurfExcel", 25, 5)); //function hoisting
 
-function washingMachin(washingliquid, water, cloths) {
-  // parameter of function
-  if (washingliquid === "tide") {
-    console.log("Barish me white ho to tide ho");
-  } else if (washingliquid === "nirma") {
-    console.log("Dudh si safedi Nirma se aaye");
-  } else if (washingliquid === "fena") {
-    console.log("Fena hi lena ");
-  } else {
-    console.log("Sadharan ditergent Powder");
-  }
+// function washingMachin(washingliquid, water, cloths) {
+//   // parameter of function
+//   if (washingliquid === "tide") {
+//     console.log("Barish me white ho to tide ho");
+//   } else if (washingliquid === "nirma") {
+//     console.log("Dudh si safedi Nirma se aaye");
+//   } else if (washingliquid === "fena") {
+//     console.log("Fena hi lena ");
+//   } else {
+//     console.log("Sadharan ditergent Powder");
+//   }
 
-  washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
-  return washingProcess;
-}
+//   washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
+//   return washingProcess;
+// }
 
-console.log(washingMachin("fena", 25, 5)); // end user  // we give argument in place of parameter And order of parameter should match with the arguments
-console.log(washingMachin(25, 5, "tide"));
+// console.log(washingMachin("fena", 25, 5)); // end user  // we give argument in place of parameter And order of parameter should match with the arguments
+// console.log(washingMachin(25, 5, "tide"));
 
-// function expression
+// // console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
+
+// let dhulaiMachin = function (washingliquid, water, cloths) {
+//   // parameter of function
+//   if (washingliquid === "tide") {
+//     console.log("Barish me white ho to tide ho");
+//   } else if (washingliquid === "nirma") {
+//     console.log("Barish me white ho to tide ho");
+//   } else if (washingliquid === "fena") {
+//     console.log("Fena hi lena ");
+//   } else {
+//     console.log("Sadharan ditergent Powder");
+//   }
+
+//   washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
+//   return washingProcess;
+// };
 
 // console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
 
-let dhulaiMachin = function (washingliquid, water, cloths) {
-  // parameter of function
-  if (washingliquid === "tide") {
-    console.log("Barish me white ho to tide ho");
-  } else if (washingliquid === "nirma") {
-    console.log("Barish me white ho to tide ho");
-  } else if (washingliquid === "fena") {
-    console.log("Fena hi lena ");
-  } else {
-    console.log("Sadharan ditergent Powder");
-  }
+// // Arrow function ES2015
 
-  washingProcess = `we have total ${cloths} cloths and we have ${water} liter of water and we have ${washingliquid}`;
-  return washingProcess;
-};
+// // const addition = (a, b) => {
+// //   return [a + b, a * b]; // if there is multiple things to return then we return all things in array i.e., []
+// // };
 
-console.log(dhulaiMachin("Ghadi", 50, 10)); // Error : finction expression can not be called befor initialisation
+// const addition = (a, b) => a + b;
+// const square = (a) => a * a; // if there is single input we can eliminate () and if output is in single line we can eliminate {} and retun
+// // arrow function does not have it's own This keyword
+// // arrow function is not even hoisted
+// console.log(addition(88, 12));
 
-// Arrow function ES2015
+// console.log(square(25));
 
-// const addition = (a, b) => {
-//   return [a + b, a * b]; // if there is multiple things to return then we return all things in array i.e., []
+// const chekThis = () => {
+//   console.log(this); // arrow function does not have this keyword of it's own it always point to it's lexical paernt or grandparent or ultimately to the window object
 // };
 
-const addition = (a, b) => a + b;
-const square = (a) => a * a; // if there is single input we can eliminate () and if output is in single line we can eliminate {} and retun
-// arrow function does not have it's own This keyword
-// arrow function is not even hoisted
-console.log(addition(88, 12));
+// console.log(chekThis());
+// 8;
 
-console.log(square(25));
+// // 14/04/2025
+// // variable Hoisting -- Jhanda behaviour
 
-const chekThis = () => {
-  console.log(this); // arrow function does not have this keyword of it's own it always point to it's lexical paernt or grandparent or ultimately to the window object
-};
+// console.log(car1); // var hoist but not value only variable  // undefined
+// console.log(car2); // undefined
 
-console.log(chekThis());
-8;
+// var car1 = "Kia sonet"; // variable declaration and we are initialising it's value
+// var car2; // only declering variable not initialising
 
-// 14/04/2025
-// variable Hoisting -- Jhanda behaviour
+// // console.log(car3); // let does not Hoist
+// // let car3 = "Tata Punch";
 
-console.log(car1); // var hoist but not value only variable  // undefined
-console.log(car2); // undefined
+// // console.log(car4);  // variable with const do not hoist
+// // const car4 = "Mercedes GLS";
 
-var car1 = "Kia sonet"; // variable declaration and we are initialising it's value
-var car2; // only declering variable not initialising
+// // programming for calculator
 
-// console.log(car3); // let does not Hoist
-// let car3 = "Tata Punch";
+// // decleration
 
-// console.log(car4);  // variable with const do not hoist
-// const car4 = "Mercedes GLS";
+// function calculator(num1, num2) {
+//   let addition = num1 + num2;
+//   let subtraction = num1 - num2;
+//   let multiplication = num1 * num2;
+//   let division = num1 / num2;
+//   let squareOfFirstNo = num1 * num1;
+//   let squareOfSecondNo = num2 * num2;
 
-// programming for calculator
+//   return [
+//     addition,
+//     subtraction,
+//     multiplication,
+//     division,
+//     squareOfFirstNo,
+//     squareOfSecondNo,
+//   ];
+// }
 
-// decleration
+// const num1 = Number(prompt("Enter first number"));
+// const num2 = Number(prompt("Enter second number"));
 
-function calculator(num1, num2) {
-  let addition = num1 + num2;
-  let subtraction = num1 - num2;
-  let multiplication = num1 * num2;
-  let division = num1 / num2;
-  let squareOfFirstNo = num1 * num1;
-  let squareOfSecondNo = num2 * num2;
-
-  return [
-    addition,
-    subtraction,
-    multiplication,
-    division,
-    squareOfFirstNo,
-    squareOfSecondNo,
-  ];
-}
-
-const num1 = Number(prompt("Enter first number"));
-const num2 = Number(prompt("Enter second number"));
-
-const doCalculation = calculator(num1, num2); // end user  // real argument
-console.log(doCalculation);
+// const doCalculation = calculator(num1, num2); // end user  // real argument
+// console.log(doCalculation);
 
 // Array
 
@@ -707,7 +705,7 @@ const cricketTeam = [
   "MSD",
   "Virat",
   "Rohit",
-  "KL Rahul",
+  "Rishab pant",
   "Hardik Pandya",
   "Nirmal",
   "Aman",
@@ -715,10 +713,98 @@ const cricketTeam = [
 ];
 
 console.log(cricketTeam);
-console.log(typeof cricketTeam);
+console.log(typeof cricketTeam); // object
 
 // second way to create array
 
 const team = new Array("Yuvraj", "Abhishek"); // Array constructor
 
 console.log(team);
+
+// 16/04/2025
+// Array operation
+
+console.log(cricketTeam[0]);
+console.log(cricketTeam[2]);
+console.log(cricketTeam[5]);
+
+console.log(cricketTeam.length);
+
+// Modify an array
+cricketTeam[0] = "Riky ponting";
+console.log(cricketTeam);
+
+// cricketTeam = ["Riky ponting", "Steve smith", "Shane watson", "Glane maxwell"]; // we can't reassign the complet array we can just change the individual element of the array
+
+// console.log(cricketTeam);
+
+// push
+cricketTeam[8] = "sandeep Sharma";
+console.log(cricketTeam);
+
+cricketTeam.push(5);
+console.log(cricketTeam);
+
+// unshift
+cricketTeam.unshift(true);
+cricketTeam.unshift([3, true, "Sunil chetri"]);
+console.log(cricketTeam);
+
+// accessing the nested element of array
+
+console.log(cricketTeam[0][2]);
+
+// pop
+console.log(cricketTeam.pop()); // removes the last element and return the poped element
+console.log(cricketTeam);
+
+// shift
+console.log(cricketTeam.shift());
+
+console.log(cricketTeam);
+
+//concat
+
+const combinedTeam = cricketTeam.concat(team);
+
+console.log(combinedTeam);
+
+// Join
+
+console.log(cricketTeam.join("$"));
+
+//slice
+
+const playingEleven = cricketTeam.slice(); // if no argument is pssed complete array is copied
+const playingEleven1 = cricketTeam.slice(2); // if only start index value is given then new array returs the value from start index to end
+const playingEleven2 = cricketTeam.slice(2, 6); // if  start index and end index value is given then new array returs the value from start index to end index-1
+
+console.log(playingEleven);
+console.log(playingEleven1);
+console.log(cricketTeam);
+
+console.log(playingEleven2);
+
+//splice
+
+cricketTeam.splice(2, 1);
+console.log(cricketTeam);
+
+cricketTeam.splice(
+  2,
+  3,
+  "Danial victory",
+  "Michel stark",
+  "dale stane",
+  "jaspreet bumrah"
+);
+console.log(cricketTeam);
+
+// indexOf
+
+console.log(cricketTeam.indexOf("Danial victory"));
+
+//include
+
+console.log(cricketTeam.includes("dale stane"));
+console.log(cricketTeam.includes("Wasim Akram"));
