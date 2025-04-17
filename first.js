@@ -700,111 +700,174 @@ and this is not a joke  */
 
 // we need a data structure to store multiple values  -- Array
 
-const cricketTeam = [
-  // array literaal
-  "MSD",
-  "Virat",
-  "Rohit",
-  "Rishab pant",
-  "Hardik Pandya",
-  "Nirmal",
-  "Aman",
-  "Marut",
-];
+// const cricketTeam = [
+//   // array literaal
+//   "MSD",
+//   "Virat",
+//   "Rohit",
+//   "Rishab pant",
+//   "Hardik Pandya",
+//   "Nirmal",
+//   "Aman",
+//   "Marut",
+// ];
 
-console.log(cricketTeam);
-console.log(typeof cricketTeam); // object
+// console.log(cricketTeam);
+// console.log(typeof cricketTeam); // object
 
-// second way to create array
+// // second way to create array
 
-const team = new Array("Yuvraj", "Abhishek"); // Array constructor
+// const team = new Array("Yuvraj", "Abhishek"); // Array constructor
 
-console.log(team);
+// console.log(team);
 
-// 16/04/2025
-// Array operation
+// // 16/04/2025
+// // Array operation
 
-console.log(cricketTeam[0]);
-console.log(cricketTeam[2]);
-console.log(cricketTeam[5]);
+// console.log(cricketTeam[0]);
+// console.log(cricketTeam[2]);
+// console.log(cricketTeam[5]);
 
-console.log(cricketTeam.length);
+// console.log(cricketTeam.length);
 
-// Modify an array
-cricketTeam[0] = "Riky ponting";
-console.log(cricketTeam);
+// // Modify an array
+// cricketTeam[0] = "Riky ponting";
+// console.log(cricketTeam);
 
-// cricketTeam = ["Riky ponting", "Steve smith", "Shane watson", "Glane maxwell"]; // we can't reassign the complet array we can just change the individual element of the array
+// // cricketTeam = ["Riky ponting", "Steve smith", "Shane watson", "Glane maxwell"]; // we can't reassign the complet array we can just change the individual element of the array
+
+// // console.log(cricketTeam);
+
+// // push
+// cricketTeam[8] = "sandeep Sharma";
+// console.log(cricketTeam);
+
+// cricketTeam.push(5);
+// console.log(cricketTeam);
+
+// // unshift
+// cricketTeam.unshift(true);
+// cricketTeam.unshift([3, true, "Sunil chetri"]);
+// console.log(cricketTeam);
+
+// // accessing the nested element of array
+
+// console.log(cricketTeam[0][2]);
+
+// // pop
+// console.log(cricketTeam.pop()); // removes the last element and return the poped element
+// console.log(cricketTeam);
+
+// // shift
+// console.log(cricketTeam.shift());
 
 // console.log(cricketTeam);
 
-// push
-cricketTeam[8] = "sandeep Sharma";
-console.log(cricketTeam);
+// //concat
 
-cricketTeam.push(5);
-console.log(cricketTeam);
+// const combinedTeam = cricketTeam.concat(team);
 
-// unshift
-cricketTeam.unshift(true);
-cricketTeam.unshift([3, true, "Sunil chetri"]);
-console.log(cricketTeam);
+// console.log(combinedTeam);
 
-// accessing the nested element of array
+// // Join
 
-console.log(cricketTeam[0][2]);
+// console.log(cricketTeam.join("$"));
 
-// pop
-console.log(cricketTeam.pop()); // removes the last element and return the poped element
-console.log(cricketTeam);
+// //slice
 
-// shift
-console.log(cricketTeam.shift());
+// const playingEleven = cricketTeam.slice(); // if no argument is pssed complete array is copied
+// const playingEleven1 = cricketTeam.slice(2); // if only start index value is given then new array returs the value from start index to end
+// const playingEleven2 = cricketTeam.slice(2, 6); // if  start index and end index value is given then new array returs the value from start index to end index-1
 
-console.log(cricketTeam);
+// console.log(playingEleven);
+// console.log(playingEleven1);
+// console.log(cricketTeam);
 
-//concat
+// console.log(playingEleven2);
 
-const combinedTeam = cricketTeam.concat(team);
+// //splice
 
-console.log(combinedTeam);
+// cricketTeam.splice(2, 1);
+// console.log(cricketTeam);
 
-// Join
+// cricketTeam.splice(
+//   2,
+//   3,
+//   "Danial victory",
+//   "Michel stark",
+//   "dale stane",
+//   "jaspreet bumrah"
+// );
+// console.log(cricketTeam);
 
-console.log(cricketTeam.join("$"));
+// // indexOf
 
-//slice
+// console.log(cricketTeam.indexOf("Danial victory"));
 
-const playingEleven = cricketTeam.slice(); // if no argument is pssed complete array is copied
-const playingEleven1 = cricketTeam.slice(2); // if only start index value is given then new array returs the value from start index to end
-const playingEleven2 = cricketTeam.slice(2, 6); // if  start index and end index value is given then new array returs the value from start index to end index-1
+// //include
 
-console.log(playingEleven);
-console.log(playingEleven1);
-console.log(cricketTeam);
+// console.log(cricketTeam.includes("dale stane"));
+// console.log(cricketTeam.includes("Wasim Akram"));
 
-console.log(playingEleven2);
+////
+//17/04/2025
+// Object
 
-//splice
+// Problem with array
 
-cricketTeam.splice(2, 1);
-console.log(cricketTeam);
+const viratKohli = [
+  "Virat",
+  "Anushka",
+  "Kohli",
+  82,
+  150,
+  "Delhi",
+  "India",
+  "Royal Challenger Banglore",
+  "Noida",
+  "Audi",
+]; // Here we don't know what each value stands for
 
-cricketTeam.splice(
-  2,
-  3,
-  "Danial victory",
-  "Michel stark",
-  "dale stane",
-  "jaspreet bumrah"
-);
-console.log(cricketTeam);
+// Object
 
-// indexOf
+// const obj ={key :value}
 
-console.log(cricketTeam.indexOf("Danial victory"));
+const viratObj = {
+  firstName: "Virat",
+  spouce: "Anushka",
+  lastName: "kohli",
+  debutYear: 2008,
+  retiremnt: 2024,
+  centuries: 82,
+  halfCentury: 150,
+  ranjeeTeam: "Delhi",
+  nationalTeam: "India",
+  iplTeam: "RCB",
+  city: "Noida",
+  brandEndorsement: "Audi",
 
-//include
+  calcTotalYearPlayed: function () {
+    this.totalyear = this.retiremnt - this.debutYear;
+  },
+};
 
-console.log(cricketTeam.includes("dale stane"));
-console.log(cricketTeam.includes("Wasim Akram"));
+console.log(viratKohli);
+
+console.log(viratObj);
+
+// How to access value
+console.log(viratObj.iplTeam);
+console.log(viratObj["spouce"]); // expression --> vaLUE
+
+const name = "Name"; // name is researved keyword at the same time this is the only keyword that can be used as a variable name but recomended -don't do it
+
+console.log(viratObj["first" + name]);
+console.log(viratObj["last" + name]);
+
+// console.log(viratObj."first" + name);  // dot notation do not work with dynamic value or expression
+
+//making method/function in object
+
+viratObj.calcTotalYearPlayed(); // activate method by calling it
+
+console.log(viratObj.totalyear);
