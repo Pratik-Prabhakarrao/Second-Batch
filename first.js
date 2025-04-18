@@ -843,10 +843,15 @@ const viratObj = {
   ranjeeTeam: "Delhi",
   nationalTeam: "India",
   iplTeam: "RCB",
-  city: "Noida",
-  brandEndorsement: "Audi",
+  city: ["Noida", "Mumbai", "Banglore", "london"],
+  brandEndorsement: {
+    car: { premium: "Audi", hatchback: "Brezza", entylevel: "alto" },
+    hospitality: "8X",
+    textile: "puma",
+  },
 
   calcTotalYearPlayed: function () {
+    // if there is function in object it is called method
     this.totalyear = this.retiremnt - this.debutYear;
   },
 };
@@ -871,3 +876,81 @@ console.log(viratObj["last" + name]);
 viratObj.calcTotalYearPlayed(); // activate method by calling it
 
 console.log(viratObj.totalyear);
+
+//18/04/2025
+
+viratObj.isFarmOwner = true;
+viratObj["isIdlyEater"] = false;
+
+console.log(viratObj);
+
+console.log(viratObj.city[2]);
+
+console.log(viratObj.brandEndorsement.textile);
+console.log(viratObj.brandEndorsement["hospitality"]);
+console.log(viratObj.brandEndorsement.car.premium);
+console.log(viratObj["brandEndorsement"]["car"]["hatchback"]);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// looping structure
+
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+console.log("Hello My name is Nirmal, I live in Gwalior");
+
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+
+// //for loop
+// for(initilisation; condition, increament/decrement){
+// //block of code  --> repeate
+// }
+
+for (let i = 10; i < 100; i++) {
+  console.log(i);
+}
+
+console.log("//////////////////////////////////////////////");
+
+for (i = 50; i > 0; i--) {
+  console.log(`Hello I live in Gwalior ${i}`);
+}
