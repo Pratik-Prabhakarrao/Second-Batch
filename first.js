@@ -815,142 +815,186 @@ and this is not a joke  */
 
 // Problem with array
 
-const viratKohli = [
-  "Virat",
-  "Anushka",
-  "Kohli",
-  82,
-  150,
-  "Delhi",
-  "India",
-  "Royal Challenger Banglore",
-  "Noida",
-  "Audi",
-]; // Here we don't know what each value stands for
+// const viratKohli = [
+//   "Virat",
+//   "Anushka",
+//   "Kohli",
+//   82,
+//   150,
+//   "Delhi",
+//   "India",
+//   "Royal Challenger Banglore",
+//   "Noida",
+//   "Audi",
+// ]; // Here we don't know what each value stands for
 
 // Object
 
 // const obj ={key :value}
 
-const viratObj = {
-  firstName: "Virat",
-  spouce: "Anushka",
-  lastName: "kohli",
-  debutYear: 2008,
-  retiremnt: 2024,
-  centuries: 82,
-  halfCentury: 150,
-  ranjeeTeam: "Delhi",
-  nationalTeam: "India",
-  iplTeam: "RCB",
-  city: ["Noida", "Mumbai", "Banglore", "london"],
-  brandEndorsement: {
-    car: { premium: "Audi", hatchback: "Brezza", entylevel: "alto" },
-    hospitality: "8X",
-    textile: "puma",
-  },
+// const viratObj = {
+//   firstName: "Virat",
+//   spouce: "Anushka",
+//   lastName: "kohli",
+//   debutYear: 2008,
+//   retiremnt: 2024,
+//   centuries: 82,
+//   halfCentury: 150,
+//   ranjeeTeam: "Delhi",
+//   nationalTeam: "India",
+//   iplTeam: "RCB",
+//   city: ["Noida", "Mumbai", "Banglore", "london"],
+//   brandEndorsement: {
+//     car: { premium: "Audi", hatchback: "Brezza", entylevel: "alto" },
+//     hospitality: "8X",
+//     textile: "puma",
+//   },
 
-  calcTotalYearPlayed: function () {
-    // if there is function in object it is called method
-    this.totalyear = this.retiremnt - this.debutYear;
-  },
-};
+//   calcTotalYearPlayed: function () {
+//     // if there is function in object it is called method
+//     this.totalyear = this.retiremnt - this.debutYear;
+//   },
+// };
 
-console.log(viratKohli);
+// console.log(viratKohli);
 
-console.log(viratObj);
+// console.log(viratObj);
 
-// How to access value
-console.log(viratObj.iplTeam);
-console.log(viratObj["spouce"]); // expression --> vaLUE
+// // How to access value
+// console.log(viratObj.iplTeam);
+// console.log(viratObj["spouce"]); // expression --> vaLUE
 
-const name = "Name"; // name is researved keyword at the same time this is the only keyword that can be used as a variable name but recomended -don't do it
+// const name = "Name"; // name is researved keyword at the same time this is the only keyword that can be used as a variable name but recomended -don't do it
 
-console.log(viratObj["first" + name]);
-console.log(viratObj["last" + name]);
+// console.log(viratObj["first" + name]);
+// console.log(viratObj["last" + name]);
 
 // console.log(viratObj."first" + name);  // dot notation do not work with dynamic value or expression
 
 //making method/function in object
 
-viratObj.calcTotalYearPlayed(); // activate method by calling it
+// viratObj.calcTotalYearPlayed(); // activate method by calling it
 
-console.log(viratObj.totalyear);
+// console.log(viratObj.totalyear);
 
 //18/04/2025
 
-viratObj.isFarmOwner = true;
-viratObj["isIdlyEater"] = false;
+// viratObj.isFarmOwner = true;
+// viratObj["isIdlyEater"] = false;
 
-console.log(viratObj);
+// console.log(viratObj);
 
-console.log(viratObj.city[2]);
+// console.log(viratObj.city[2]);
 
-console.log(viratObj.brandEndorsement.textile);
-console.log(viratObj.brandEndorsement["hospitality"]);
-console.log(viratObj.brandEndorsement.car.premium);
-console.log(viratObj["brandEndorsement"]["car"]["hatchback"]);
+// console.log(viratObj.brandEndorsement.textile);
+// console.log(viratObj.brandEndorsement["hospitality"]);
+// console.log(viratObj.brandEndorsement.car.premium);
+// console.log(viratObj["brandEndorsement"]["car"]["hatchback"]);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // looping structure
 
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
-console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
+// console.log("Hello My name is Nirmal, I live in Gwalior");
 
-console.log(1);
-console.log(2);
-console.log(3);
-console.log(4);
+// console.log(1);
+// console.log(2);
+// console.log(3);
+// console.log(4);
 
 // //for loop
 // for(initilisation; condition, increament/decrement){
 // //block of code  --> repeate
 // }
 
-for (let i = 10; i < 100; i++) {
-  console.log(i);
-}
+// for (let i = 10; i < 100; i++) {
+//   console.log(i);
+// }
 
-console.log("//////////////////////////////////////////////");
+// console.log("//////////////////////////////////////////////");
 
-for (i = 50; i > 0; i--) {
-  console.log(`Hello I live in Gwalior ${i}`);
-}
+// for (i = 50; i > 0; i--) {
+//   console.log(`Hello I live in Gwalior ${i}`);
+// }
+
+// 23/04/2025
+
+// while loop -- when we don't know the number of iteration
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// console.log(dice); //5
+
+// while (dice !== 6) {
+//   console.log(`you have rolled ${dice}`);
+
+//   //rolling dice once again to exit the loop
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) {
+//     console.log("You have rolled 6 you are about to exit loop");
+//   }
+// }
+
+let userPassword = Number(prompt("enter your password to open the door"));
+
+const password = 902131;
+
+// while (password !== userPassword) {
+//   console.log("password enterd is wrong plese re-enter the password");
+
+//   userPassword = Number(prompt("enter your password to open the door"));
+//   if (userPassword === password) {
+//     console.log("your password is correct, let me open door for you");
+//   }
+// }
+
+// if I enter correct password in the first attempt then loop does not run even once
+// do while
+
+do {
+  if (password === userPassword) {
+    console.log("your password is correct, let me open door for you");
+  } else {
+    console.log("password enterd is wrong plese re-enter the password");
+  }
+  userPassword = Number(prompt("enter your password to open the door"));
+} while (password !== userPassword);
+
+console.log("your password is correct olala");
