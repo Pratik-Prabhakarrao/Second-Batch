@@ -945,7 +945,7 @@ and this is not a joke  */
 // //block of code  --> repeate
 // }
 
-// for (let i = 10; i < 100; i++) {
+// for (let i = -10; i < 100; i++) {
 //   console.log(i);
 // }
 
@@ -972,10 +972,6 @@ and this is not a joke  */
 //   }
 // }
 
-let userPassword = Number(prompt("enter your password to open the door"));
-
-const password = 902131;
-
 // while (password !== userPassword) {
 //   console.log("password enterd is wrong plese re-enter the password");
 
@@ -986,15 +982,77 @@ const password = 902131;
 // }
 
 // if I enter correct password in the first attempt then loop does not run even once
-// do while
+// do
 
-do {
-  if (password === userPassword) {
-    console.log("your password is correct, let me open door for you");
-  } else {
-    console.log("password enterd is wrong plese re-enter the password");
-  }
-  userPassword = Number(prompt("enter your password to open the door"));
-} while (password !== userPassword);
+// let userPassword = Number(prompt("enter your password to open the door"));
 
-console.log("your password is correct olala");
+// let userPassword;
+// const password = 902131;
+
+// do {
+//   userPassword = Number(prompt("enter your password to open the door"));
+//   if (password === userPassword) {
+//     console.log("your password is correct, let me open door for you");
+//   } else {
+//     console.log("password enterd is wrong plese re-enter the password");
+//   }
+// } while (password !== userPassword);
+
+// console.log("your password is correct olala");
+
+// 02/05/2025
+
+// for in loop   -- object / array
+
+// cats in the box --- single cat  cat
+
+// for(single object  in  container){
+
+// }
+
+const viratObj = {
+  firstName: "Virat",
+  spouce: "Anushka",
+  lastName: "kohli",
+  debutYear: 2008,
+  retiremnt: 2024,
+  centuries: 82,
+  halfCentury: 150,
+  ranjeeTeam: "Delhi",
+  nationalTeam: "India",
+  iplTeam: "RCB",
+  city: ["Noida", "Mumbai", "Banglore", "london"],
+  brandEndorsement: {
+    car: { premium: "Audi", hatchback: "Brezza", entylevel: "alto" },
+    hospitality: "8X",
+    textile: "puma",
+  },
+};
+
+//old way to take data out of object
+console.log(viratObj.iplTeam);
+console.log(viratObj["city"]);
+
+// taking data out of container
+
+for (let key in viratObj) {
+  console.log(`${key}  = ${viratObj[key]}`);
+}
+
+// FOR IN IS GOOD FOR FETCHING DATA FROM OBJECT AND NOT ARRAY WE CAN FETCH DATA FROM ARRAY BUT NOT RECOMENDED
+
+const arr1 = [1, 3, 5, 6, true, "chris Gayle"];
+
+for (let index in arr1) {
+  console.log(`${index} = ${arr1[index]}`);
+}
+
+// for of loop ---> work best on array
+
+// for( individual item of container name){
+
+// }
+
+for (element of arr1) {
+  console.log(element);
+}
