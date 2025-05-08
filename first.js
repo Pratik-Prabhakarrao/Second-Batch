@@ -1036,7 +1036,7 @@ and this is not a joke  */
 // // taking data out of container
 
 // for (let key in viratObj) {
-//   console.log(`${key}  = ${viratObj[key]}`);
+//   console.log(`${key}  == ${viratObj[key]}`);
 // }
 
 // // FOR IN IS GOOD FOR FETCHING DATA FROM OBJECT AND NOT ARRAY WE CAN FETCH DATA FROM ARRAY BUT NOT RECOMENDED
@@ -1063,59 +1063,143 @@ and this is not a joke  */
 
 // forEach loop
 
-const addition = function (first, second) {
-  result = first + second;
-  return result;
-};
+// const addition = function (first, second) {
+//   result = first + second;
+//   return result;
+// };
 
-// CALLING A FUNCTION
+// // CALLING A FUNCTION
 
-console.log(addition(5, 8));
+// console.log(addition(5, 8));
 
-// normal function will not work unless it is called in to action
+// // normal function will not work unless it is called in to action
 
-// call back function --> a function that calls itself and works itself after some code is run
+// // call back function --> a function that calls itself and works itself after some code is run
 
-const arr = [
-  "Virat",
-  "Sachin",
-  "chopra",
-  "Virendra",
-  "Yuvraj",
-  "Gambhir",
-  "Siddhu",
-  "vvsLaxman",
-  "Ramesh",
-  "Banger",
-  "Jadega",
-  "Rahul",
-];
+// const arr = [
+//   "Virat",
+//   "Sachin",
+//   "chopra",
+//   "Virendra",
+//   "Yuvraj",
+//   "Gambhir",
+//   "Siddhu",
+//   "vvsLaxman",
+//   "Ramesh",
+//   "Banger",
+//   "Jadega",
+//   "Rahul",
+// ];
 
-arr.forEach(function (element, index, array) {
-  console.log(`shri ${element} is a good player is on the index ${index}`);
-  console.log(array);
-});
+// // arr.forEach(function (element, index, array) {
+// //   console.log(`shri ${element} is a good player is on the index ${index}`);
+// //   console.log(array);
+// // });
 
-// Looping control statement
+// // Looping control statement
 
-// break statement -- breaks the loop on encounter of specific value
+// // break statement -- breaks the loop on encounter of specific value
 
-for (let i = 0; i <= arr.length - 1; i++) {
-  if (arr[i] === "Siddhu") {
-    break; // break terminates the loop forever
-  } else if (arr[i] === "chopra") {
-    continue; // in continue current iteration is skipped but loop continues
-  } else {
-    console.log(`${arr[i]} is a very good comentetor`);
+// for (let i = 0; i <= arr.length - 1; i++) {
+//   if (arr[i] === "Siddhu") {
+//     break; // break terminates the loop forever
+//   } else if (arr[i] === "chopra") {
+//     continue; // in continue current iteration is skipped but loop continues
+//   } else {
+//     console.log(`${arr[i]} is a very good comentetor`);
+//   }
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   if (i === 4) {
+//     continue;
+//   }
+//   if (i === 8) {
+//     break;
+//   }
+//   console.log(i);
+// }
+
+// 05/05/2025
+
+// nested loop
+
+for (let i = 0; i <= 3; i++) {
+  for (let j = 3; j >= 0; j--) {
+    for (let k = 100; k >= 97; k--)
+      console.log(
+        `the value of i = ${i} and the value of j = ${j} and the value of k = ${k}`
+      );
   }
 }
 
-for (let i = 0; i <= 10; i++) {
-  if (i === 4) {
-    continue;
-  }
-  if (i === 8) {
-    break;
-  }
+// 06/05/2025
+
+// let balance = 5000;
+
+// let transactions = [200, 300, 4000, 500, 100, 50, 300, 40];
+
+// for (tranx of transactions) {
+//   if (tranx <= 100) {
+//     console.log(`the amount ${tranx} is less than 100 can't dispense cash`);
+//     continue;
+//   } else if (tranx > balance) {
+//     `you have insufficient balance please deposit cash in a/c`;
+//     break;
+//   } else {
+//     console.log(`amount of ${tranx} is withdrawn please collect cash yor cash`);
+//     balance = balance - tranx;
+//   }
+// }
+
+// for of with index in array
+
+const colors = ["red", "green", "blue"];
+for (const [index, color] of colors.entries()) {
+  console.log(`Index: ${index}, Color: ${color}`);
+}
+
+// EXERCISE;
+
+// 1) programme to find if number is  prime number
+// // 2) programme to reverse the string   country - yrtnuoc
+//  reverse the word oreder  -  india is a great country -> country great a is india
+
+//  reverse of word and word order  - yrtnuoc taerg
+
+//  reverse only word not word order  - aidni si a
+
+//  programme to find the pallendrome number // 121 - 121 12121
+
+//  function to make a pizza which will take parameter - topping
+
+// create a function to make a calculator
+
+// const rev = "india is a great country";
+
+// let reveresed = "";
+
+// for (i = rev.length - 1; i >= 0; i--) {
+//   console.log(rev[i]);
+
+//   reveresed = reveresed + rev[i];
+// }
+// console.log(reveresed);
+
+// reversed() do not use it
+
+// console.log(rev.split(" ").reverse().join(" "));
+
+for (i = 0; i <= 10; i++) {
   console.log(i);
 }
+
+console.log();
+
+print();
+
+
+portable file 
+
+
+just in time compiled 
