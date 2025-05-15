@@ -1124,14 +1124,14 @@ and this is not a joke  */
 
 // nested loop
 
-for (let i = 0; i <= 3; i++) {
-  for (let j = 3; j >= 0; j--) {
-    for (let k = 100; k >= 97; k--)
-      console.log(
-        `the value of i = ${i} and the value of j = ${j} and the value of k = ${k}`
-      );
-  }
-}
+// for (let i = 0; i <= 3; i++) {
+//   for (let j = 3; j >= 0; j--) {
+//     for (let k = 100; k >= 97; k--)
+//       console.log(
+//         `the value of i = ${i} and the value of j = ${j} and the value of k = ${k}`
+//       );
+//   }
+// }
 
 // 06/05/2025
 
@@ -1154,10 +1154,10 @@ for (let i = 0; i <= 3; i++) {
 
 // for of with index in array
 
-const colors = ["red", "green", "blue"];
-for (const [index, color] of colors.entries()) {
-  console.log(`Index: ${index}, Color: ${color}`);
-}
+// const colors = ["red", "green", "blue"];
+// for (const [index, color] of colors.entries()) {
+//   console.log(`Index: ${index}, Color: ${color}`);
+// }
 
 // EXERCISE;
 
@@ -1190,16 +1190,31 @@ for (const [index, color] of colors.entries()) {
 
 // console.log(rev.split(" ").reverse().join(" "));
 
-for (i = 0; i <= 10; i++) {
-  console.log(i);
-}
+// for (i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
 
-console.log();
+// console.log();
 
-print();
+// print();
 
+// portable file
 
-portable file 
+// just in time compiled
 
+// 15/05/2025
 
-just in time compiled 
+// non blocking event loop
+
+console.log(1); // top level code or synchronous code
+console.log(2);
+setTimeout(() => {
+  console.log("I am comming after 5 second ");
+}, 5000); // this is asynchronous code and runs only after all the top level code is executed
+
+// alert("This is alert"); // blocking code   it block the execution of the programme because java script has single thred
+// const num = prompt("enter some number");
+// console.log(num);
+console.log(3);
+console.log(4);
+console.log(5);
