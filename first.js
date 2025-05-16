@@ -1206,15 +1206,80 @@ and this is not a joke  */
 
 // non blocking event loop
 
-console.log(1); // top level code or synchronous code
-console.log(2);
-setTimeout(() => {
-  console.log("I am comming after 5 second ");
-}, 5000); // this is asynchronous code and runs only after all the top level code is executed
+// console.log(1); // top level code or synchronous code
+// console.log(2);
+// setTimeout(() => {
+//   console.log("I am comming after 5 second ");
+// }, 5000); // this is asynchronous code and runs only after all the top level code is executed
 
 // alert("This is alert"); // blocking code   it block the execution of the programme because java script has single thred
 // const num = prompt("enter some number");
 // console.log(num);
-console.log(3);
-console.log(4);
-console.log(5);
+// console.log(3);
+// console.log(4);
+// console.log(5);
+
+// 16 /05/ 2025
+
+// console.log("Start"); //1
+// function processOrder(orderId) {
+//   console.log(`Processing order ${orderId}`); //3
+//   setTimeout(() => {
+//     //  pushed into callback que but run on no 6
+//     console.log(`Order ${orderId} is ready!`);
+//   }, 0);
+//   payment(orderId); //4
+// }
+// function payment(orderId) {
+//   console.log(`Payment successful for order ${orderId}`);
+// }
+// processOrder(101); // 2
+// console.log("End"); //5
+
+{
+  let firstName = "Gopal";
+  const lastName = "Dubey";
+  var occupation = "Football player";
+}
+
+// console.log(firstName);
+// console.log(lastName);
+console.log(occupation);
+
+// function Calc(a, b) {
+//   let calculatorName = "Casio";
+//   var calcul = "Casio";
+//   return a + b;
+// }
+
+// console.log(Calc(3, 5));
+// console.log(Calc.calculatorName);
+// console.log(Calc.calcul);
+
+let globalVar = "I am in global scope";
+function outerFunction() {
+  let outerVar = "I am in outer function";
+  function innerFunction() {
+    let innerVar = "I am in inner function";
+    console.log(innerVar); // ✅ Accessible (Declared in innerFunction)
+    console.log(outerVar); // ✅ Accessible (Found in outerFunction)
+    console.log(globalVar); // ✅ Accessible (Found in global scope)
+    // Block Scope inside innerFunction
+    if (true) {
+      let blockLet = "I am block-scoped (let)";
+      const blockConst = "I am block-scoped (const)";
+      var blockVar = "I am function-scoped (var)";
+      console.log(blockLet); // ✅ Accessible (Inside block)
+      console.log(blockConst); // ✅ Accessible (Inside block)
+      console.log(blockVar); // ✅ Accessible (Inside block)
+    }
+    // console.log(blockLet); // ❌ ReferenceError (Not accessible outside block)
+    // console.log(blockConst); // ❌ ReferenceError (Not accessibleoutside block)
+    console.log(blockVar); // ✅ Accessible (var is function-scoped,not block-scoped)
+  }
+  innerFunction();
+}
+outerFunction();
+console.log(globalVar); // ✅ Accessible (Declared in global scope)
+// console.log(outerVar); // ❌ ReferenceError (Not accessible outside outerFunction)
+// console.log(innerVar); // ❌ ReferenceError (Not accessible outside innerFunction)
