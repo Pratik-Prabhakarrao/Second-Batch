@@ -1244,7 +1244,7 @@ and this is not a joke  */
 
 // console.log(firstName);
 // console.log(lastName);
-console.log(occupation);
+// console.log(occupation);
 
 // function Calc(a, b) {
 //   let calculatorName = "Casio";
@@ -1258,7 +1258,7 @@ console.log(occupation);
 
 let globalVar = "I am in global scope";
 function outerFunction() {
-  let outerVar = "I am in outer function";
+  outerVar = "I am in outer function";
   function innerFunction() {
     let innerVar = "I am in inner function";
     console.log(innerVar); // ✅ Accessible (Declared in innerFunction)
@@ -1281,5 +1281,6 @@ function outerFunction() {
 }
 outerFunction();
 console.log(globalVar); // ✅ Accessible (Declared in global scope)
-// console.log(outerVar); // ❌ ReferenceError (Not accessible outside outerFunction)
+console.log(blockVar); // ❌ not Accessible (because var in the block although does not follow block but it attaches itsself to the nearest function i.e. innerFunction in this case)
+console.log(outerVar); // ❌ ReferenceError (Not accessible outside outerFunction)
 // console.log(innerVar); // ❌ ReferenceError (Not accessible outside innerFunction)
