@@ -1236,51 +1236,241 @@ and this is not a joke  */
 // processOrder(101); // 2
 // console.log("End"); //5
 
-{
-  let firstName = "Gopal";
-  const lastName = "Dubey";
-  var occupation = "Football player";
-}
-
-// console.log(firstName);
-// console.log(lastName);
-// console.log(occupation);
-
-// function Calc(a, b) {
-//   let calculatorName = "Casio";
-//   var calcul = "Casio";
-//   return a + b;
+// {
+//   let firstName = "Gopal";
+//   const lastName = "Dubey";
+//   var occupation = "Football player";
 // }
 
-// console.log(Calc(3, 5));
-// console.log(Calc.calculatorName);
-// console.log(Calc.calcul);
+// // console.log(firstName);
+// // console.log(lastName);
+// // console.log(occupation);
 
-let globalVar = "I am in global scope";
-function outerFunction() {
-  outerVar = "I am in outer function";
-  function innerFunction() {
-    let innerVar = "I am in inner function";
-    console.log(innerVar); // ✅ Accessible (Declared in innerFunction)
-    console.log(outerVar); // ✅ Accessible (Found in outerFunction)
-    console.log(globalVar); // ✅ Accessible (Found in global scope)
-    // Block Scope inside innerFunction
-    if (true) {
-      let blockLet = "I am block-scoped (let)";
-      const blockConst = "I am block-scoped (const)";
-      var blockVar = "I am function-scoped (var)";
-      console.log(blockLet); // ✅ Accessible (Inside block)
-      console.log(blockConst); // ✅ Accessible (Inside block)
-      console.log(blockVar); // ✅ Accessible (Inside block)
-    }
-    // console.log(blockLet); // ❌ ReferenceError (Not accessible outside block)
-    // console.log(blockConst); // ❌ ReferenceError (Not accessibleoutside block)
-    console.log(blockVar); // ✅ Accessible (var is function-scoped,not block-scoped)
-  }
-  innerFunction();
+// // function Calc(a, b) {
+// //   let calculatorName = "Casio";
+// //   var calcul = "Casio";
+// //   return a + b;
+// // }
+
+// // console.log(Calc(3, 5));
+// // console.log(Calc.calculatorName);
+// // console.log(Calc.calcul);
+
+// let globalVar = "I am in global scope";
+// function outerFunction() {
+//   outerVar = "I am in outer function";
+//   function innerFunction() {
+//     let innerVar = "I am in inner function";
+//     console.log(innerVar); // ✅ Accessible (Declared in innerFunction)
+//     console.log(outerVar); // ✅ Accessible (Found in outerFunction)
+//     console.log(globalVar); // ✅ Accessible (Found in global scope)
+//     // Block Scope inside innerFunction
+//     if (true) {
+//       let blockLet = "I am block-scoped (let)";
+//       const blockConst = "I am block-scoped (const)";
+//       var blockVar = "I am function-scoped (var)";
+//       console.log(blockLet); // ✅ Accessible (Inside block)
+//       console.log(blockConst); // ✅ Accessible (Inside block)
+//       console.log(blockVar); // ✅ Accessible (Inside block)
+//     }
+//     // console.log(blockLet); // ❌ ReferenceError (Not accessible outside block)
+//     // console.log(blockConst); // ❌ ReferenceError (Not accessibleoutside block)
+//     console.log(blockVar); // ✅ Accessible (var is function-scoped,not block-scoped)
+//   }
+//   innerFunction();
+// }
+// outerFunction();
+// console.log(globalVar); // ✅ Accessible (Declared in global scope)
+// console.log(blockVar); // ❌ not Accessible (because var in the block although does not follow block but it attaches itsself to the nearest function i.e. innerFunction in this case)
+// console.log(outerVar); // ❌ ReferenceError (Not accessible outside outerFunction)
+// // console.log(innerVar); // ❌ ReferenceError (Not accessible outside innerFunction)
+
+// 21/05/2025
+
+// const sachin = {
+//   name: "Sachin Tendulkar",
+//   debutYear: 1989,
+//   retirementYear: 2013,
+//   totalYearsPlayed: function () {
+//     return this.retirementYear - this.debutYear;
+//   },
+// };
+// console.log(sachin.totalYearsPlayed());
+
+// const christianoRonaldo = {
+//   name: "Christiano Ronaldo",
+//   debutYear: 2003,
+//   retirementYear: 2080,
+//   // totalYearsPlayed: function () {
+//   //   return this.retirementYear - this.debutYear;
+//   // },
+// };
+
+// christianoRonaldo.totalYearsPlayed = sachin.totalYearsPlayed;
+
+// console.log(christianoRonaldo.totalYearsPlayed());
+
+// //////
+
+// const Ganguly = {
+//   name: "Sourabh",
+//   debutYear: 1980,
+//   retirementYear: 2018,
+// };
+
+// Ganguly.totalYearsPlayed = sachin.totalYearsPlayed;
+
+// console.log(Ganguly.totalYearsPlayed());
+
+// console.log("Let's check TDZ");
+
+// console.log(a); // undefined
+
+// console.log(b);
+
+// // console.log(c);
+
+// var a = 10;
+// const b = 13;
+// let c = 13;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);'
+
+// greet(); // Output: Hello, World!
+
+// function greet() {
+//   "use strict";
+//   console.log("Hello, World!");
+//   console.log(this);
+// }
+
+// // console.log(hello);
+
+// // let hello = function () {
+// //   console.log("Hello from expression");
+// // };
+
+// const squre = (a) => {
+//   return a * a;
+//   console.log(this);
+// };
+
+// console.log(squre(8));
+
+// const Dravid = {
+//   name: "Rahul",
+//   debutYear: 100,
+//   retirementYear: 150,
+//   squre: () => {
+//     return Dravid.debutYear - Dravid.retirementYear;
+//     console.log(this);
+//   },
+// };
+
+// console.log(Dravid.squre());
+
+// 23/05/2025
+// var count;
+
+// console.log(count);
+
+// count = 10;
+
+// console.log(height); // Height is hoisted in temporal dead zode search for it by applying breaks in sourse and look in scope and then script
+
+// let height = 4;
+
+// comparision of regular vs arrow function
+
+// var name =  usha kiran
+
+// const restaurant = {
+//   name: "Tansen rsidency",
+//   established: 2010,
+//   getAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.established);
+//   },
+//   greet: () => console.log(`Welcome to ${this.name}`),
+// };
+// restaurant.greet(); // Welcome to undefined
+// restaurant.getAge();
+// console.log(this.name); // undefined
+
+// function inside an method
+
+const restaurant = {
+  name: "Tansen residency",
+  established: 2010,
+  getAge: function () {
+    console.log(this);
+    console.log(2025 - this.established);
+    const isOlderThanDecade = function () {
+      console.log(`restaurant is ${2025 - this.established} years old`);
+    };
+    isOlderThanDecade(); //normal function call so this → undefined
+  },
+  greet: () => console.log(`Welcome to ${this.name}`),
+};
+// restaurant.greet(); // Welcome to undefined
+// console.log(this.name); // undefined
+
+restaurant.getAge();
+
+//  to prove regular function call this points to undefined
+function subtraction(a, b) {
+  "use strict";
+  console.log(this); // in regular function call this points to window object in sloppy and is undefined in strict mode
+
+  return a - b;
 }
-outerFunction();
-console.log(globalVar); // ✅ Accessible (Declared in global scope)
-console.log(blockVar); // ❌ not Accessible (because var in the block although does not follow block but it attaches itsself to the nearest function i.e. innerFunction in this case)
-console.log(outerVar); // ❌ ReferenceError (Not accessible outside outerFunction)
-// console.log(innerVar); // ❌ ReferenceError (Not accessible outside innerFunction)
+
+console.log(subtraction(4, 10));
+
+// solution to undefind or using function inside of method
+
+// const restaurante = {
+//   name: "Tansen residency",
+//   established: 1995,
+//   getAge: function () {
+//     self = this;
+//     console.log(this);
+//     console.log(2025 - this.established);
+//     const isOlderThanDecade = function () {
+//       console.log(`restaurant is ${2025 - self.established} years old`);
+//     };
+//     isOlderThanDecade(); //normal function call so this → undefined
+//   },
+//   greet: () => console.log(`Welcome to ${this.name}`),
+// };
+
+// restaurante.getAge();
+
+// second solution
+
+const restaurante = {
+  name: "Tansen residency",
+  established: 1840,
+  getAge: function () {
+    console.log(this);
+    console.log(2025 - this.established);
+    const isOlderThanDecade = () => {
+      console.log(`restaurant is ${2025 - this.established} years old`);
+    };
+    isOlderThanDecade(); //normal function call so this → undefined
+  },
+  greet: () => console.log(`Welcome to ${this.name}`),
+};
+
+restaurante.getAge();
+
+// argument keyword
+const multiply = function (a, b) {
+  console.log(a * b);
+  console.log(arguments);
+
+  return a * b;
+};
+multiply(6, 2, 3, 5, 6);
