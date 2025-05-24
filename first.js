@@ -1384,7 +1384,7 @@ and this is not a joke  */
 
 // comparision of regular vs arrow function
 
-// var name =  usha kiran
+// var name = " usha kiran";
 
 // const restaurant = {
 //   name: "Tansen rsidency",
@@ -1401,35 +1401,35 @@ and this is not a joke  */
 
 // function inside an method
 
-const restaurant = {
-  name: "Tansen residency",
-  established: 2010,
-  getAge: function () {
-    console.log(this);
-    console.log(2025 - this.established);
-    const isOlderThanDecade = function () {
-      console.log(`restaurant is ${2025 - this.established} years old`);
-    };
-    isOlderThanDecade(); //normal function call so this → undefined
-  },
-  greet: () => console.log(`Welcome to ${this.name}`),
-};
+// const restaurant = {
+//   name: "Tansen residency",
+//   established: 2010,
+//   getAge: function () {
+//     console.log(this);
+//     console.log(2025 - this.established);
+//     const isOlderThanDecade = function () {
+//       console.log(`restaurant is ${2025 - this.established} years old`);
+//     };
+//     isOlderThanDecade(); //normal function call so this → undefined
+//   },
+//   greet: () => console.log(`Welcome to ${this.name}`),
+// };
 // restaurant.greet(); // Welcome to undefined
 // console.log(this.name); // undefined
 
-restaurant.getAge();
+// restaurant.getAge();
 
-//  to prove regular function call this points to undefined
-function subtraction(a, b) {
-  "use strict";
-  console.log(this); // in regular function call this points to window object in sloppy and is undefined in strict mode
+// //  to prove regular function call this points to undefined
+// function subtraction(a, b) {
+//   "use strict";
+//   console.log(this); // in regular function call this points to window object in sloppy and is undefined in strict mode
 
-  return a - b;
-}
+//   return a - b;
+// }
 
-console.log(subtraction(4, 10));
+// console.log(subtraction(4, 10));
 
-// solution to undefind or using function inside of method
+// // solution to undefind or using function inside of method
 
 // const restaurante = {
 //   name: "Tansen residency",
@@ -1446,31 +1446,90 @@ console.log(subtraction(4, 10));
 //   greet: () => console.log(`Welcome to ${this.name}`),
 // };
 
+// // restaurante.getAge();
+
+// // second solution
+
+// const restaurante = {
+//   name: "Tansen residency",
+//   established: 1840,
+//   getAge: function () {
+//     console.log(this);
+//     console.log(2025 - this.established);
+//     const isOlderThanDecade = () => {
+//       console.log(`restaurant is ${2025 - this.established} years old`);
+//     };
+//     isOlderThanDecade(); //normal function call so this → undefined
+//   },
+//   greet: () => console.log(`Welcome to ${this.name}`),
+// };
+
 // restaurante.getAge();
 
-// second solution
-
-const restaurante = {
-  name: "Tansen residency",
-  established: 1840,
-  getAge: function () {
-    console.log(this);
-    console.log(2025 - this.established);
-    const isOlderThanDecade = () => {
-      console.log(`restaurant is ${2025 - this.established} years old`);
-    };
-    isOlderThanDecade(); //normal function call so this → undefined
-  },
-  greet: () => console.log(`Welcome to ${this.name}`),
-};
-
-restaurante.getAge();
-
 // argument keyword
-const multiply = function (a, b) {
-  console.log(a * b);
-  console.log(arguments);
+// const multiply = function (a, b) {
+//   console.log(a * b);
+//   console.log(arguments);
 
-  return a * b;
+//   return a * b;
+// };
+// multiply(6, 2, 3, 5, 6);
+
+// 24/05/2025
+
+const company = {
+  // this will be stored in the heap
+  name: "TechCorp",
+  location: "San Francisco",
 };
-multiply(6, 2, 3, 5, 6);
+
+company.location = "Gole ka mandir";
+
+const branchOffice = company;
+
+console.log(branchOffice);
+
+branchOffice.name = "Dubey corporation";
+
+console.log(company);
+
+Dubeycompany = {
+  name: "Nirmal corporation",
+  location: "Pragati vihar",
+};
+
+console.log(company);
+
+const x = 10;
+let y = x;
+
+console.log(y);
+y = 15;
+console.log(y);
+console.log(x);
+
+// shallow copy deep copy
+const panditCorpo = {
+  name: "TechCorp",
+  location: "San Francisco",
+  employee: ["Vladimir", "Evan", "Dimitri"],
+};
+//shallow copy
+const shkhaGKM = panditCorpo;
+shkhaGKM.employee.push("Surgey");
+console.log(panditCorpo);
+
+const amanCorpo = JSON.parse(JSON.stringify(panditCorpo));
+console.log(amanCorpo);
+
+amanCorpo.name = "Gwaliorcompany";
+
+console.log(amanCorpo);
+console.log(panditCorpo);
+
+const deepCopy2 = structuredClone(panditCorpo);
+
+deepCopy2.employee.push("Aman", "Marut", "Nirmal");
+
+console.log(deepCopy2);
+console.log(panditCorpo);
