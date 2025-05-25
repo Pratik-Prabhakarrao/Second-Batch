@@ -1477,59 +1477,255 @@ and this is not a joke  */
 
 // 24/05/2025
 
-const company = {
-  // this will be stored in the heap
-  name: "TechCorp",
-  location: "San Francisco",
+// const company = {
+//   // this will be stored in the heap
+//   name: "TechCorp",
+//   location: "San Francisco",
+// };
+
+// company.location = "Gole ka mandir";
+
+// const branchOffice = company;
+
+// console.log(branchOffice);
+
+// branchOffice.name = "Dubey corporation";
+
+// console.log(company);
+
+// Dubeycompany = {
+//   name: "Nirmal corporation",
+//   location: "Pragati vihar",
+// };
+
+// console.log(company);
+
+// const x = 10;
+// let y = x;
+
+// console.log(y);
+// y = 15;
+// console.log(y);
+// console.log(x);
+
+// // shallow copy deep copy
+// const panditCorpo = {
+//   name: "TechCorp",
+//   location: "San Francisco",
+//   employee: ["Vladimir", "Evan", "Dimitri"],
+// };
+// //shallow copy
+// const shkhaGKM = panditCorpo;
+// shkhaGKM.employee.push("Surgey");
+// console.log(panditCorpo);
+
+// const amanCorpo = JSON.parse(JSON.stringify(panditCorpo));
+// console.log(amanCorpo);
+
+// amanCorpo.name = "Gwaliorcompany";
+
+// console.log(amanCorpo);
+// console.log(panditCorpo);
+
+// const deepCopy2 = structuredClone(panditCorpo);
+
+// deepCopy2.employee.push("Aman", "Marut", "Nirmal");
+
+// console.log(deepCopy2);
+// console.log(panditCorpo);
+
+//25/05/2025
+
+// Destructuring
+
+const numbers = [10, 20, 30];
+
+// const marutMark = numbers[0];
+// console.log(marutMark);
+
+const [Mark_of_Marut, Mark_of_Aman, Mark_of_Nirmal] = numbers;
+
+console.log(Mark_of_Aman);
+console.log(Mark_of_Marut);
+console.log(Mark_of_Nirmal);
+
+// sKIPPING VALUE
+
+const colors = ["red", "green", "blue", "yellow"];
+// Skipping the second element
+const [firstColor, , thirdColor] = colors;
+console.log(firstColor); // Output: "red"
+console.log(thirdColor); // Output: "blue" green is skipped by empty slot;
+
+// setting default value
+
+const fruit = ["Apple", "lemon"];
+
+const [firstFruit, secondFruit = "banana", thirdFruit = "jackFruit"] = fruit;
+
+console.log(firstFruit);
+console.log(secondFruit);
+console.log(thirdFruit);
+
+// Swaping variable
+
+var a = 10;
+var b = 20;
+let c;
+
+// a = b;
+// b = a;
+
+// c = a; //
+// a = b;
+// b = c;
+
+console.log(a);
+console.log(b);
+
+//Without using third variable
+
+[b, a] = [a, b];
+
+console.log(a);
+console.log(b);
+
+//Function
+
+function getScores() {
+  return [85, 90, 95];
+}
+// Destructuring the return values
+const [math, science, english] = getScores();
+console.log(math); // Output: 85
+console.log(science); // Output: 90
+console.log(english); // Output: 95'
+
+// Nested array
+
+const nestedArray = [1, [2, 3], 4];
+// Extracting nested values
+const [first, [second, third], fourth] = nestedArray;
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(third); // Output: 3
+console.log(fourth); // Output: 4
+
+// destructuring and looping
+
+const users = [
+  ["Harry", 25],
+  ["Ronal", 30],
+  ["Hermione", 28],
+];
+// Looping with destructuring
+for (const [name, age] of users) {
+  console.log(`${name} is ${age} years old.`);
+}
+
+// rest operator
+const numberss = [1, 2, 3, 4, 5];
+// Using the rest operator
+const [firsts, seconds, ...resta] = numberss;
+console.log(firsts); // Output: 1
+console.log(seconds); // Output: 2
+console.log(resta); // Output: [3, 4, 5] (remaining elements)
+
+// object destructuring
+
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 30,
+// };
+// const { firstName, lastName, age } = person;
+// console.log(firstName); // Output: John
+// console.log(lastName); // Output: Doe
+// console.log(age); // Output: 30
+
+// with different variable name
+
+const employee = {
+  name: "Alice",
+  position: "Developer",
+  salary: 50000,
+};
+const { name: empName, position: jobTitle, salary: annualIncome } = employee;
+console.log(empName); // Output: Alice
+console.log(jobTitle); // Output: Developer
+console.log(annualIncome); // Output: 50000
+
+// nested object
+
+const student = {
+  name: "David",
+  info: {
+    age: 20,
+    grade: "A",
+    address: {
+      city: "New York",
+      country: "USA",
+    },
+  },
+};
+const {
+  name,
+  info: {
+    age,
+    grade,
+    address: { city, country },
+  },
+} = student;
+console.log(name); // Output: David
+console.log(age); // Output: 20
+console.log(grade); // Output: A
+console.log(city); // Output: New York
+
+// default value
+const user = {
+  username: "coder123",
+  email: "coder@example.com",
+  role: "admin",
+};
+const { username, email, role = "User" } = user;
+console.log(username); // Output: coder123
+console.log(email); // Output: coder@example.com
+console.log(role); // Output: User (default value)
+
+// looping destructure
+
+function displayUser({ name, age }) {
+  console.log(`User: ${name}, Age: ${age}`);
+}
+const userDetails = {
+  name: "Sophia",
+  age: 25,
+  country: "Canada",
+};
+displayUser(userDetails);
+// Output: User: Sophia, Age: 25
+
+// rest with  object
+
+// const product = {
+//   id: 101,
+//   name: "Laptop",
+//   price: 1200,
+//   brand: "TechBrand",
+// };
+// const { id, name, ...details } = product;
+// console.log(id); // Output: 101
+// console.log(name); // Output: Laptop
+// console.log(details); // Output: { price: 1200, brand: 'TechBrand' }
+
+// copying object
+const employeee = {
+  name: "Ethan",
+  department: "IT",
+  experience: 5,
 };
 
-company.location = "Gole ka mandir";
+const updatedEmp = { ...employeee, experience: 6, location: "NewYork" };
 
-const branchOffice = company;
-
-console.log(branchOffice);
-
-branchOffice.name = "Dubey corporation";
-
-console.log(company);
-
-Dubeycompany = {
-  name: "Nirmal corporation",
-  location: "Pragati vihar",
-};
-
-console.log(company);
-
-const x = 10;
-let y = x;
-
-console.log(y);
-y = 15;
-console.log(y);
-console.log(x);
-
-// shallow copy deep copy
-const panditCorpo = {
-  name: "TechCorp",
-  location: "San Francisco",
-  employee: ["Vladimir", "Evan", "Dimitri"],
-};
-//shallow copy
-const shkhaGKM = panditCorpo;
-shkhaGKM.employee.push("Surgey");
-console.log(panditCorpo);
-
-const amanCorpo = JSON.parse(JSON.stringify(panditCorpo));
-console.log(amanCorpo);
-
-amanCorpo.name = "Gwaliorcompany";
-
-console.log(amanCorpo);
-console.log(panditCorpo);
-
-const deepCopy2 = structuredClone(panditCorpo);
-
-deepCopy2.employee.push("Aman", "Marut", "Nirmal");
-
-console.log(deepCopy2);
-console.log(panditCorpo);
+console.log(updatedEmp);
+console.log(employeee);
