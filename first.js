@@ -1538,171 +1538,171 @@ and this is not a joke  */
 
 // Destructuring
 
-const numbers = [10, 20, 30];
+// const numbers = [10, 20, 30];
 
-// const marutMark = numbers[0];
-// console.log(marutMark);
+// // const marutMark = numbers[0];
+// // console.log(marutMark);
 
-const [Mark_of_Marut, Mark_of_Aman, Mark_of_Nirmal] = numbers;
+// const [Mark_of_Marut, Mark_of_Aman, Mark_of_Nirmal] = numbers;
 
-console.log(Mark_of_Aman);
-console.log(Mark_of_Marut);
-console.log(Mark_of_Nirmal);
+// console.log(Mark_of_Aman);
+// console.log(Mark_of_Marut);
+// console.log(Mark_of_Nirmal);
 
-// sKIPPING VALUE
+// // sKIPPING VALUE
 
-const colors = ["red", "green", "blue", "yellow"];
-// Skipping the second element
-const [firstColor, , thirdColor] = colors;
-console.log(firstColor); // Output: "red"
-console.log(thirdColor); // Output: "blue" green is skipped by empty slot;
+// const colors = ["red", "green", "blue", "yellow"];
+// // Skipping the second element
+// const [firstColor, , thirdColor] = colors;
+// console.log(firstColor); // Output: "red"
+// console.log(thirdColor); // Output: "blue" green is skipped by empty slot;
 
-// setting default value
+// // setting default value
 
-const fruit = ["Apple", "lemon"];
+// const fruit = ["Apple", "lemon"];
 
-const [firstFruit, secondFruit = "banana", thirdFruit = "jackFruit"] = fruit;
+// const [firstFruit, secondFruit = "banana", thirdFruit = "jackFruit"] = fruit;
 
-console.log(firstFruit);
-console.log(secondFruit);
-console.log(thirdFruit);
+// console.log(firstFruit);
+// console.log(secondFruit);
+// console.log(thirdFruit);
 
-// Swaping variable
+// // Swaping variable
 
-var a = 10;
-var b = 20;
-let c;
+// var a = 10;
+// var b = 20;
+// let c;
 
-// a = b;
-// b = a;
+// // a = b;
+// // b = a;
 
-// c = a; //
-// a = b;
-// b = c;
+// // c = a; //
+// // a = b;
+// // b = c;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-//Without using third variable
+// //Without using third variable
 
-[b, a] = [a, b];
+// [b, a] = [a, b];
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
-//Function
+// //Function
 
-function getScores() {
-  return [85, 90, 95];
-}
-// Destructuring the return values
-const [math, science, english] = getScores();
-console.log(math); // Output: 85
-console.log(science); // Output: 90
-console.log(english); // Output: 95'
+// function getScores() {
+//   return [85, 90, 95];
+// }
+// // Destructuring the return values
+// const [math, science, english] = getScores();
+// console.log(math); // Output: 85
+// console.log(science); // Output: 90
+// console.log(english); // Output: 95'
 
-// Nested array
+// // Nested array
 
-const nestedArray = [1, [2, 3], 4];
-// Extracting nested values
-const [first, [second, third], fourth] = nestedArray;
-console.log(first); // Output: 1
-console.log(second); // Output: 2
-console.log(third); // Output: 3
-console.log(fourth); // Output: 4
+// const nestedArray = [1, [2, 3], 4];
+// // Extracting nested values
+// const [first, [second, third], fourth] = nestedArray;
+// console.log(first); // Output: 1
+// console.log(second); // Output: 2
+// console.log(third); // Output: 3
+// console.log(fourth); // Output: 4
 
-// destructuring and looping
+// // destructuring and looping
 
-const users = [
-  ["Harry", 25],
-  ["Ronal", 30],
-  ["Hermione", 28],
-];
-// Looping with destructuring
-for (const [name, age] of users) {
-  console.log(`${name} is ${age} years old.`);
-}
+// const users = [
+//   ["Harry", 25],
+//   ["Ronal", 30],
+//   ["Hermione", 28],
+// ];
+// // Looping with destructuring
+// for (const [name, age] of users) {
+//   console.log(`${name} is ${age} years old.`);
+// }
 
-// rest operator
-const numberss = [1, 2, 3, 4, 5];
-// Using the rest operator
-const [firsts, seconds, ...resta] = numberss;
-console.log(firsts); // Output: 1
-console.log(seconds); // Output: 2
-console.log(resta); // Output: [3, 4, 5] (remaining elements)
+// // rest operator
+// const numberss = [1, 2, 3, 4, 5];
+// // Using the rest operator
+// const [firsts, seconds, ...resta] = numberss;
+// console.log(firsts); // Output: 1
+// console.log(seconds); // Output: 2
+// console.log(resta); // Output: [3, 4, 5] (remaining elements)
 
-// object destructuring
+// // object destructuring
 
-// const person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   age: 30,
+// // const person = {
+// //   firstName: "John",
+// //   lastName: "Doe",
+// //   age: 30,
+// // };
+// // const { firstName, lastName, age } = person;
+// // console.log(firstName); // Output: John
+// // console.log(lastName); // Output: Doe
+// // console.log(age); // Output: 30
+
+// // with different variable name
+
+// const employee = {
+//   name: "Alice",
+//   position: "Developer",
+//   salary: 50000,
 // };
-// const { firstName, lastName, age } = person;
-// console.log(firstName); // Output: John
-// console.log(lastName); // Output: Doe
-// console.log(age); // Output: 30
+// const { name: empName, position: jobTitle, salary: annualIncome } = employee;
+// console.log(empName); // Output: Alice
+// console.log(jobTitle); // Output: Developer
+// console.log(annualIncome); // Output: 50000
 
-// with different variable name
+// // nested object
 
-const employee = {
-  name: "Alice",
-  position: "Developer",
-  salary: 50000,
-};
-const { name: empName, position: jobTitle, salary: annualIncome } = employee;
-console.log(empName); // Output: Alice
-console.log(jobTitle); // Output: Developer
-console.log(annualIncome); // Output: 50000
+// const student = {
+//   name: "David",
+//   info: {
+//     age: 20,
+//     grade: "A",
+//     address: {
+//       city: "New York",
+//       country: "USA",
+//     },
+//   },
+// };
+// const {
+//   name,
+//   info: {
+//     age,
+//     grade,
+//     address: { city, country },
+//   },
+// } = student;
+// console.log(name); // Output: David
+// console.log(age); // Output: 20
+// console.log(grade); // Output: A
+// console.log(city); // Output: New York
 
-// nested object
+// // default value
+// const user = {
+//   username: "coder123",
+//   email: "coder@example.com",
+//   role: "admin",
+// };
+// const { username, email, role = "User" } = user;
+// console.log(username); // Output: coder123
+// console.log(email); // Output: coder@example.com
+// console.log(role); // Output: User (default value)
 
-const student = {
-  name: "David",
-  info: {
-    age: 20,
-    grade: "A",
-    address: {
-      city: "New York",
-      country: "USA",
-    },
-  },
-};
-const {
-  name,
-  info: {
-    age,
-    grade,
-    address: { city, country },
-  },
-} = student;
-console.log(name); // Output: David
-console.log(age); // Output: 20
-console.log(grade); // Output: A
-console.log(city); // Output: New York
+// // looping destructure
 
-// default value
-const user = {
-  username: "coder123",
-  email: "coder@example.com",
-  role: "admin",
-};
-const { username, email, role = "User" } = user;
-console.log(username); // Output: coder123
-console.log(email); // Output: coder@example.com
-console.log(role); // Output: User (default value)
-
-// looping destructure
-
-function displayUser({ name, age }) {
-  console.log(`User: ${name}, Age: ${age}`);
-}
-const userDetails = {
-  name: "Sophia",
-  age: 25,
-  country: "Canada",
-};
-displayUser(userDetails);
+// function displayUser({ name, age }) {
+//   console.log(`User: ${name}, Age: ${age}`);
+// }
+// const userDetails = {
+//   name: "Sophia",
+//   age: 25,
+//   country: "Canada",
+// };
+// displayUser(userDetails);
 // Output: User: Sophia, Age: 25
 
 // rest with  object
@@ -1719,13 +1719,104 @@ displayUser(userDetails);
 // console.log(details); // Output: { price: 1200, brand: 'TechBrand' }
 
 // copying object
-const employeee = {
-  name: "Ethan",
-  department: "IT",
-  experience: 5,
+// const employeee = {
+//   name: "Ethan",
+//   department: "IT",
+//   experience: 5,
+// };
+
+// const updatedEmp = { ...employeee, experience: 6, location: "NewYork" };
+
+// console.log(updatedEmp);
+// console.log(employeee);
+
+//28/05/2025
+
+const employee = ["Aman", "Nirnal", "Marut"];
+console.log(employee);
+
+console.log(...employee); // spread operator it spread and take the content out the array
+
+console.log([...employee]);
+console.log({ ...employee }); // we can convert array into object
+
+// copy an  array  but only shallow copy
+const newEmployee = employee;
+
+console.log(newEmployee);
+
+newEmployee[3] = "Suresh";
+
+console.log(employee);
+console.log(newEmployee);
+
+// merging array
+const management = ["gopi", "Kishan"];
+
+const mergedArray1 = employee.concat(management);
+
+console.log(mergedArray1);
+
+// merge with destructuring
+
+console.log([...employee, ...management]);
+
+// adding new element while copying
+
+const superArray = [
+  "Narendra Modi",
+  "Nirmla Sitaraman",
+  ...mergedArray1,
+  "Amit shah",
+];
+
+console.log(superArray);
+
+const str = "Gopal";
+
+console.log([...str]);
+
+// spread on object
+
+const person = { name: "John", age: 25 };
+console.log({ ...person });
+
+const copiedPerson = { ...person };
+
+console.log(copiedPerson);
+
+// merging object
+
+const job = { role: "Developer", company: "TechCorp" };
+const mergedObject = { ...person, ...job };
+console.log(mergedObject); // Output: { name: 'Ram', age: 28, role: 'Developer', company: 'TechCorp' }
+
+// overriding the existing properties
+const user = { name: "Emma", age: 30 };
+const updatedUser = { ...user, age: 31, city: "New York" };
+console.log(updatedUser);
+
+// spread in function
+function sum(a, b, c) {
+  return a + b + c;
+}
+const numbers = [10, 20, 30];
+console.log(sum(...numbers)); // Output: 60
+
+// find max and min of array
+
+const numberss = [12, 45, 78, 23, 56];
+console.log(Math.max(...numberss)); // Output: 78
+console.log(Math.min(...numberss)); // Output: 12
+
+// copy object with spread operator   spread operator copy make deep only on the first level of object and nested object are showllow copied
+const person3 = {
+  name: "Alice",
+  details: { age: 30, city: "New York" },
 };
-
-const updatedEmp = { ...employeee, experience: 6, location: "NewYork" };
-
-console.log(updatedEmp);
-console.log(employeee);
+const copiedPerson3 = { ...person3 };
+copiedPerson3.details.age = 31;
+copiedPerson3.name = "Mathew";
+console.log(person3.details.age); // Output: 31 (Both object are affected as shallow copy)
+console.log(copiedPerson3.name); // Output: Mathew (affected as name is the first level property)
+console.log(person3.name); // Output: Alice (not affected as only first level properties are copied )
