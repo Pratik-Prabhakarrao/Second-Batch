@@ -1732,91 +1732,141 @@ and this is not a joke  */
 
 //28/05/2025
 
-const employee = ["Aman", "Nirnal", "Marut"];
-console.log(employee);
+// const employee = ["Aman", "Nirnal", "Marut"];
+// console.log(employee);
 
-console.log(...employee); // spread operator it spread and take the content out the array
+// console.log(...employee); // spread operator it spread and take the content out the array
 
-console.log([...employee]);
-console.log({ ...employee }); // we can convert array into object
+// console.log([...employee]);
+// console.log({ ...employee }); // we can convert array into object
 
-// copy an  array  but only shallow copy
-const newEmployee = employee;
+// // copy an  array  but only shallow copy
+// const newEmployee = employee;
 
-console.log(newEmployee);
+// console.log(newEmployee);
 
-newEmployee[3] = "Suresh";
+// newEmployee[3] = "Suresh";
 
-console.log(employee);
-console.log(newEmployee);
+// console.log(employee);
+// console.log(newEmployee);
 
-// merging array
-const management = ["gopi", "Kishan"];
+// // merging array
+// const management = ["gopi", "Kishan"];
 
-const mergedArray1 = employee.concat(management);
+// const mergedArray1 = employee.concat(management);
 
-console.log(mergedArray1);
+// console.log(mergedArray1);
 
-// merge with destructuring
+// // merge with destructuring
 
-console.log([...employee, ...management]);
+// console.log([...employee, ...management]);
 
-// adding new element while copying
+// // adding new element while copying
 
-const superArray = [
-  "Narendra Modi",
-  "Nirmla Sitaraman",
-  ...mergedArray1,
-  "Amit shah",
-];
+// const superArray = [
+//   "Narendra Modi",
+//   "Nirmla Sitaraman",
+//   ...mergedArray1,
+//   "Amit shah",
+// ];
 
-console.log(superArray);
+// console.log(superArray);
 
-const str = "Gopal";
+// const str = "Gopal";
 
-console.log([...str]);
+// console.log([...str]);
 
-// spread on object
+// // spread on object
 
-const person = { name: "John", age: 25 };
-console.log({ ...person });
+// const person = { name: "John", age: 25 };
+// console.log({ ...person });
 
-const copiedPerson = { ...person };
+// const copiedPerson = { ...person };
 
-console.log(copiedPerson);
+// console.log(copiedPerson);
 
-// merging object
+// // merging object
 
-const job = { role: "Developer", company: "TechCorp" };
-const mergedObject = { ...person, ...job };
-console.log(mergedObject); // Output: { name: 'Ram', age: 28, role: 'Developer', company: 'TechCorp' }
+// const job = { role: "Developer", company: "TechCorp" };
+// const mergedObject = { ...person, ...job };
+// console.log(mergedObject); // Output: { name: 'Ram', age: 28, role: 'Developer', company: 'TechCorp' }
 
-// overriding the existing properties
-const user = { name: "Emma", age: 30 };
-const updatedUser = { ...user, age: 31, city: "New York" };
-console.log(updatedUser);
+// // overriding the existing properties
+// const user = { name: "Emma", age: 30 };
+// const updatedUser = { ...user, age: 31, city: "New York" };
+// console.log(updatedUser);
 
-// spread in function
-function sum(a, b, c) {
-  return a + b + c;
+// // spread in function
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
+// const numbers = [10, 20, 30];
+// console.log(sum(...numbers)); // Output: 60
+
+// // find max and min of array
+
+// const numberss = [12, 45, 78, 23, 56];
+// console.log(Math.max(...numberss)); // Output: 78
+// console.log(Math.min(...numberss)); // Output: 12
+
+// // copy object with spread operator   spread operator copy make deep only on the first level of object and nested object are showllow copied
+// const person3 = {
+//   name: "Alice",
+//   details: { age: 30, city: "New York" },
+// };
+// const copiedPerson3 = { ...person3 };
+// copiedPerson3.details.age = 31;
+// copiedPerson3.name = "Mathew";
+// console.log(person3.details.age); // Output: 31 (Both object are affected as shallow copy)
+// console.log(copiedPerson3.name); // Output: Mathew (affected as name is the first level property)
+// console.log(person3.name); // Output: Alice (not affected as only first level properties are copied )
+
+// 29/05/2025
+
+//short circuiting
+// or type
+
+// "", undefined, null, false, NaN, 0;  -- false
+
+// console.log(true || 0 || 25 || "Marut"); // true
+// console.log("" || "Ram"); // output : "Ram"
+// console.log(true || 0); // output : true
+// console.log(false || "ram"); // output : Ram
+// console.log(undefined || null); // output : null
+// console.log(undefined || null || " " || 0 || "Ram"); // output : Ram
+
+// Practical use
+
+// const account = {};
+// account.balance = 0;
+// account.minimumBalance = 1000;
+// // Using the ternary operator
+// const availableBalance1 = account.balance
+//   ? account.balance
+//   : account.minimumBalance;
+// console.log(availableBalance1); // Output: 5000
+// // Using the logical OR (||) operator
+// const availableBalance2 = account.balance || account.minimumBalance;
+// console.log(availableBalance2); // Output: 5000
+
+// AND Short
+// console.log(25 && "Shyam"); // output : Shyam
+// console.log("" && "Shyam"); // output : ""
+// console.log(true && 0); // output :0
+// console.log(false && "Shyam"); // output :false
+// console.log(undefined && null); // output :undefined
+// console.log(5 && "Hello" && true && 100); // output : 100
+// console.log(10 && 0 && "JavaScript"); // output :0
+// console.log("JavaScript" && "React" && undefined && "Angular"); // output :undefined
+// console.log("Frontend" && "Backend" && "Full Stack"); // Full Stack
+
+//
+const account = {};
+account.balance = 5000;
+const withdrawalAmount = Number(prompt("Enter the amount to withdraw"));
+const message = account.balance >= withdrawalAmount && "Withdrawal successful!";
+if (message == false) {
+  console.log("You have insufficient balance");
+} else {
+  console.log(message);
 }
-const numbers = [10, 20, 30];
-console.log(sum(...numbers)); // Output: 60
-
-// find max and min of array
-
-const numberss = [12, 45, 78, 23, 56];
-console.log(Math.max(...numberss)); // Output: 78
-console.log(Math.min(...numberss)); // Output: 12
-
-// copy object with spread operator   spread operator copy make deep only on the first level of object and nested object are showllow copied
-const person3 = {
-  name: "Alice",
-  details: { age: 30, city: "New York" },
-};
-const copiedPerson3 = { ...person3 };
-copiedPerson3.details.age = 31;
-copiedPerson3.name = "Mathew";
-console.log(person3.details.age); // Output: 31 (Both object are affected as shallow copy)
-console.log(copiedPerson3.name); // Output: Mathew (affected as name is the first level property)
-console.log(person3.name); // Output: Alice (not affected as only first level properties are copied )
