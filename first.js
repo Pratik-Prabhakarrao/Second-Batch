@@ -3,6 +3,8 @@
 // // let number = Math.trunc(Math.random() * 10);
 // // console.log(number);
 
+// const { use } = require("react");
+
 // console.log(4 + 6);
 
 // let number = 10;
@@ -1828,28 +1830,45 @@ and this is not a joke  */
 
 // "", undefined, null, false, NaN, 0;  -- false
 
-// console.log(true || 0 || 25 || "Marut"); // true
+// console.log(0 || 0 || 0 || undefined); // true
 // console.log("" || "Ram"); // output : "Ram"
 // console.log(true || 0); // output : true
 // console.log(false || "ram"); // output : Ram
 // console.log(undefined || null); // output : null
 // console.log(undefined || null || " " || 0 || "Ram"); // output : Ram
 
-// Practical use
+// // Practical use
 
 // const account = {};
-// account.balance = 0;
-// account.minimumBalance = 1000;
-// // Using the ternary operator
+// account.balance = null;
+// account.minimumBalancerquirement = 1000;
+// Using the ternary operator
+
+// if (!account.balance) {
+//   console.log(account.minimumBalancerquirement);
+// } else {
+//   console.log(account.balance);
+// }
+
+// Same programme with ternary operator
+
 // const availableBalance1 = account.balance
 //   ? account.balance
-//   : account.minimumBalance;
+//   : account.minimumBalancerquirement;
 // console.log(availableBalance1); // Output: 5000
-// // Using the logical OR (||) operator
-// const availableBalance2 = account.balance || account.minimumBalance;
+
+// Same programme with short circuiting
+
+// Using the logical OR (||) operator
+// const availableBalance2 = account.balance || account.minimumBalancerquirement;
 // console.log(availableBalance2); // Output: 5000
 
-// AND Short
+// Nullish coelising operator
+
+// const availableBalance2 = account.balance ?? account.minimumBalancerquirement;
+// console.log(availableBalance2); // Output: 5000
+
+// AND Short -- false will short circuit
 // console.log(25 && "Shyam"); // output : Shyam
 // console.log("" && "Shyam"); // output : ""
 // console.log(true && 0); // output :0
@@ -1860,13 +1879,167 @@ and this is not a joke  */
 // console.log("JavaScript" && "React" && undefined && "Angular"); // output :undefined
 // console.log("Frontend" && "Backend" && "Full Stack"); // Full Stack
 
-//
-const account = {};
-account.balance = 5000;
-const withdrawalAmount = Number(prompt("Enter the amount to withdraw"));
-const message = account.balance >= withdrawalAmount && "Withdrawal successful!";
-if (message == false) {
-  console.log("You have insufficient balance");
+// const account = {};
+// account.balance = 5000;
+// const withdrawalAmount = Number(prompt("Enter the amount to withdraw"));
+// const message = account.balance >= withdrawalAmount && "Withdrawal successful!";
+// if (message == false) {
+//   console.log("You have insufficient balance");
+// } else {
+//   console.log(message);
+// }
+
+// // Falsy value
+// console.log(Boolean(""));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(NaN));
+// console.log(Boolean(0));
+
+// / Logical Or=
+
+// const shop1 = {
+//   name: "Baker’s Delight",
+//   numEmployees: 8,
+// };
+// const shop2 = {
+//   name: "Sweet Treats",
+//   owner: "Emily Carter",
+// };
+// // Using the OR (||) operator to set default values
+// shop1.numEmployees = shop1.numEmployees || 5; // Output: 8
+// shop1.owner = shop1.owner || "Aman"; // Output: 8
+// console.log(shop1.numEmployees);
+// console.log(shop1.owner);
+
+// shop2.numEmployees = shop2.numEmployees || 5; // Output: 5
+// shop2.owner = shop2.owner || "Aman"; // Output: 8
+// console.log(shop2.numEmployees);
+// console.log(shop2.owner);
+
+// logical &&=  for default value
+
+// 31/05/2025
+
+// shopkeeper are facing threats so your job is to mask their name if name exist or if does not keep recored as it is - kashmir
+
+// const shop3 = {
+//   name: "Baker’s Delight",
+//   numEmployees: 8,
+// };
+// const shop4 = {
+//   name: "Sweet Treats",
+//   owner: "Emily Carter",
+// };
+// Using the AND (&&) operator to set default values
+// shop3.owner = shop3.owner && "Government owned"; // Output: undefined
+// shop4.owner = shop4.owner && "Government owned"; // Government owned
+
+// console.log(shop3.owner);
+// console.log(shop4.owner);
+
+// Using the AND assignment (&&=) operator above code can be optimised
+// shop3.owner &&= "Government owned"; // Output: undefined If the left-hand side is falsy, it remains unchanged.
+// shop4.owner &&= "Government owned"; // Government owned | The &&= operator assigns a new value only if the existing value is truthy.
+
+// console.log(shop3.owner);
+// console.log(shop4.owner);
+
+/// NullshCoelising or
+
+// government want to know the real employee data of college if data is present if not assign 100 as default
+// const shop5 = {
+//   name: "GIt college",
+//   numEmployees: 0,
+// };
+// const shop6 = {
+//   name: "IIITm",
+//   owner: "Emily Carter",
+// };
+// Using the OR assignment (||=) operator above code can be optimised
+// shop5.numEmployees = shop5.numEmployees || 100; // Output: numemployee = 100 which is wrong because college is on shut down
+// shop6.numEmployees = shop6.numEmployees || 100; // Output: owner = // will set default
+
+// console.log(shop5);
+// console.log(shop6);
+
+// shop5.numEmployees ??= 100; // Output: owner =
+// shop6.numEmployees ??= 100; // Output: owner =
+
+// console.log(shop5);
+// console.log(shop6);
+
+/////////////
+
+// Enhanced Object literal
+// object shorthand
+const firstName = "Alice";
+const age = 25;
+
+const person = {
+  name: firstName,
+  age: age,
+};
+console.log(person); // { name: 'Alice', age: 25 }
+
+const person1 = {
+  firstName,
+  age,
+};
+
+console.log(person1);
+
+// Method shorthand
+
+const user = {
+  greet: function () {
+    // earlier key was mandatory
+    return "Hello!";
+  },
+};
+
+console.log(user.greet());
+
+const user1 = {
+  greetMe() {
+    return "How are you";
+  },
+};
+
+console.log(user1.greetMe());
+
+// Computed property name
+const propName = "status";
+const task = {
+  [propName]: "Completed",
+};
+console.log(task.status); // "Completed"
+
+const key = "score";
+const game = {
+  ["player_" + key]: 100,
+};
+console.log(game.player_score); // 100
+
+// Option chaining
+
+const user3 = {
+  profile: {
+    name: "Alice",
+    address: {
+      city: "New York",
+    },
+  },
+};
+// Checking each property manually
+if (user3 && user3.profile && user3.profile.address) {
+  console.log(user3.profile.address.city);
 } else {
-  console.log(message);
+  console.log("Property does not exist.");
 }
+
+// console.log(user3.profile.address.city);
+
+console.log(user3?.profilee?.address?.city);
+
+console.log("Hi");
