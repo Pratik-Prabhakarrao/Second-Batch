@@ -1931,23 +1931,23 @@ and this is not a joke  */
 //   name: "Sweet Treats",
 //   owner: "Emily Carter",
 // };
-// Using the AND (&&) operator to set default values
+// // Using the AND (&&) operator to set default values
 // shop3.owner = shop3.owner && "Government owned"; // Output: undefined
 // shop4.owner = shop4.owner && "Government owned"; // Government owned
 
 // console.log(shop3.owner);
 // console.log(shop4.owner);
 
-// Using the AND assignment (&&=) operator above code can be optimised
+// // Using the AND assignment (&&=) operator above code can be optimised
 // shop3.owner &&= "Government owned"; // Output: undefined If the left-hand side is falsy, it remains unchanged.
 // shop4.owner &&= "Government owned"; // Government owned | The &&= operator assigns a new value only if the existing value is truthy.
 
 // console.log(shop3.owner);
 // console.log(shop4.owner);
 
-/// NullshCoelising or
+// /// NullshCoelising or
 
-// government want to know the real employee data of college if data is present if not assign 100 as default
+// // government want to know the real employee data of college if data is present if not assign 100 as default
 // const shop5 = {
 //   name: "GIt college",
 //   numEmployees: 0,
@@ -1956,7 +1956,7 @@ and this is not a joke  */
 //   name: "IIITm",
 //   owner: "Emily Carter",
 // };
-// Using the OR assignment (||=) operator above code can be optimised
+// // Using the OR assignment (||=) operator above code can be optimised
 // shop5.numEmployees = shop5.numEmployees || 100; // Output: numemployee = 100 which is wrong because college is on shut down
 // shop6.numEmployees = shop6.numEmployees || 100; // Output: owner = // will set default
 
@@ -1973,53 +1973,53 @@ and this is not a joke  */
 
 // Enhanced Object literal
 // object shorthand
-const firstName = "Alice";
-const age = 25;
+// const firstName = "Alice";
+// const age = 25;
 
-const person = {
-  name: firstName,
-  age: age,
-};
-console.log(person); // { name: 'Alice', age: 25 }
+// const person = {
+//   name: firstName,
+//   age: age,
+// };
+// console.log(person); // { name: 'Alice', age: 25 }
 
-const person1 = {
-  firstName,
-  age,
-};
+// const person1 = {
+//   firstName,
+//   age,
+// };
 
-console.log(person1);
+// console.log(person1);
 
 // Method shorthand
 
-const user = {
-  greet: function () {
-    // earlier key was mandatory
-    return "Hello!";
-  },
-};
+// const user = {
+//   greet: function () {
+//     // earlier key was mandatory
+//     return "Hello!";
+//   },
+// };
 
-console.log(user.greet());
+// console.log(user.greet());
 
-const user1 = {
-  greetMe() {
-    return "How are you";
-  },
-};
+// const user1 = {
+//   greetMe() {
+//     return "How are you";
+//   },
+// };
 
-console.log(user1.greetMe());
+// console.log(user1.greetMe());
 
 // Computed property name
-const propName = "status";
-const task = {
-  [propName]: "Completed",
-};
-console.log(task.status); // "Completed"
+// const propName = "status";
+// const task = {
+//   [propName]: "Completed",
+// };
+// console.log(task.status); // "Completed"
 
-const key = "score";
-const game = {
-  ["player_" + key]: 100,
-};
-console.log(game.player_score); // 100
+// const key = "score";
+// const game = {
+//   ["player_" + key]: 100,
+// };
+// console.log(game.player_score); // 100
 
 // Option chaining
 
@@ -2032,14 +2032,142 @@ const user3 = {
   },
 };
 // Checking each property manually
-if (user3 && user3.profile && user3.profile.address) {
-  console.log(user3.profile.address.city);
-} else {
-  console.log("Property does not exist.");
-}
+// if (user3 && user3.profile && user3.profile.address) {
+//   console.log(user3.profile.address.city);
+// } else {
+//   console.log("Property does not exist.");
+// }
 
 // console.log(user3.profile.address.city);
 
-console.log(user3?.profilee?.address?.city);
+console.log(user3?.profie?.address?.city);
 
 console.log("Hi");
+
+// 01/06/2025
+
+// Set map
+const arr5 = [2, 5, 5, 7, 6, 7, 2];
+
+console.log(arr5);
+
+const set1 = new Set([2, 5, 5, 7, 6, 7, 2]);
+
+console.log(set1);
+
+// add value
+set1.add(25);
+
+console.log(set1);
+
+// delete value
+set1.delete(6);
+console.log(set1);
+
+// check for value of set
+console.log(set1.has(60));
+
+// check size
+console.log(set1.size);
+
+// clear
+set1.clear();
+console.log(set1);
+
+//
+let cities = new Set(["New York", "London", "Paris"]);
+cities.forEach((city) => {
+  console.log(city);
+});
+
+for (let city of cities) {
+  console.log(city);
+}
+
+console.log(cities.keys());
+console.log(cities.values());
+console.log(cities.entries());
+
+////
+
+let setA = new Set([1, 2, 3]);
+let setB = new Set([7, 4, 5]);
+let symmetricDifference = setA.symmetricDifference(setB);
+console.log(symmetricDifference); // Output: Set(2) {1, 2}
+
+let isDisjoint = setA.isDisjointFrom(setB);
+console.log(isDisjoint); // Output: False
+
+// creating unique array
+
+let fruits = ["apple", "banana", "apple", "orange", "banana", "grape"];
+let uniqueFruits = [...new Set(fruits)];
+console.log(uniqueFruits); // Output: ['apple', 'banana', 'orange','grape']
+
+// Weak set
+
+let weakSet = new WeakSet();
+let obj1 = { name: "Alice" };
+let obj2 = { name: "Bob" };
+
+let firstName = ["Nirmal", 10];
+weakSet.add(obj1);
+weakSet.add(obj2);
+weakSet.add(firstName);
+
+console.log(weakSet);
+
+console.log(weakSet.has(obj1)); // true
+weakSet.delete(obj1);
+console.log(weakSet.has(obj1)); // false
+
+console.log(weakSet.size); // no size property
+
+// Map
+
+let userRoles = new Map([
+  ["xman", "Help"],
+  ["Alice", "Admin"],
+  ["Bob", "Editor"],
+  ["Charlie", "Viewer"],
+]);
+console.log(userRoles);
+// Output: Map(3) { 'Alice' => 'Admin', 'Bob' => 'Editor', 'Charlie' =>'Viewer' }
+
+let person = new Map();
+person.set(["name", "John"], ["Abhram", "Dhoom"]);
+
+console.log(person);
+// Output: Map(3) { 'name' => 'John', 'age' => 30, 'city' => 'New York' }
+
+// converting object into map
+
+let obj = {
+  name: "Alice",
+  age: 25,
+  city: "New York",
+};
+let map = new Map(Object.entries(obj));
+console.log(map); // Output: Map(3) { 'name' => 'Alice', 'age' => 25,'city' => 'New York' }
+console.log(map.get("name")); // Output: Alice
+
+// iterating  map
+let countries = new Map([
+  ["USA", "Washington, D.C."],
+  ["France", "Paris"],
+  ["Japan", "Tokyo"],
+]);
+countries.forEach((capital, country) => {
+  console.log(`${country}: ${capital}`);
+});
+// Output:
+// USA: Washington, D.C.
+// France: Paris
+// Japan: Tokyo
+
+let funcMap = new Map();
+function greet() {
+  console.log("Hello!");
+}
+funcMap.set(greet, "Greeting Function");
+console.log(funcMap.get(greet)); // Output: Greeting Function
